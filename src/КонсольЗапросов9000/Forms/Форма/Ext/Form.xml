@@ -1181,6 +1181,7 @@
 								<InputField name="ВидРезультата" id="290">
 									<DataPath>ОпцияВидРезультата</DataPath>
 									<TitleLocation>None</TitleLocation>
+									<Width>5</Width>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>7</MaxWidth>
 									<ListChoiceMode>true</ListChoiceMode>
