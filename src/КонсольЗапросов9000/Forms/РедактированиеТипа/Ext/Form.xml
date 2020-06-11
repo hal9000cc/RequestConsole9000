@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -134,9 +134,7 @@
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
-					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СоставТипа</DataPath>
-					<TreeSpecialSearch>false</TreeSpecialSearch>
 					<ContextMenu name="СоставТипаКонтекстноеМеню" id="5"/>
 					<AutoCommandBar name="СоставТипаКоманднаяПанель" id="6">
 						<Autofill>false</Autofill>
@@ -186,7 +184,6 @@
 							<EditMode>EnterOnInput</EditMode>
 							<Width>1</Width>
 							<MaxWidth>1</MaxWidth>
-							<FileDragMode>AsFile</FileDragMode>
 							<ContextMenu name="СоставТипаКартинкаКонтекстноеМеню" id="96"/>
 							<ExtendedTooltip name="СоставТипаКартинкаРасширеннаяПодсказка" id="97"/>
 						</PictureField>
@@ -355,7 +352,6 @@
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
-					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СтруктураТаблицы</DataPath>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="СтруктураТаблицыКонтекстноеМеню" id="64"/>
@@ -364,36 +360,36 @@
 							<Button name="СтруктураТаблицыКнопкаДобавить" id="85">
 								<Type>CommandBarButton</Type>
 								<Representation>PictureAndText</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.СтруктураТаблицы.StandardCommand.Add</CommandName>
-								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="СтруктураТаблицыКнопкаДобавитьРасширеннаяПодсказка" id="86"/>
 							</Button>
 							<Button name="СтруктураТаблицыКнопкаСкопировать" id="87">
 								<Type>CommandBarButton</Type>
 								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.СтруктураТаблицы.StandardCommand.Copy</CommandName>
-								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="СтруктураТаблицыКнопкаСкопироватьРасширеннаяПодсказка" id="88"/>
 							</Button>
 							<Button name="СтруктураТаблицыКнопкаУдалить" id="89">
 								<Type>CommandBarButton</Type>
 								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.СтруктураТаблицы.StandardCommand.Delete</CommandName>
-								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="СтруктураТаблицыКнопкаУдалитьРасширеннаяПодсказка" id="90"/>
 							</Button>
 							<Button name="СтруктураТаблицыКнопкаПереместитьВверх" id="91">
 								<Type>CommandBarButton</Type>
 								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.СтруктураТаблицы.StandardCommand.MoveUp</CommandName>
-								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="СтруктураТаблицыКнопкаПереместитьВверхРасширеннаяПодсказка" id="92"/>
 							</Button>
 							<Button name="СтруктураТаблицыКнопкаПереместитьВниз" id="93">
 								<Type>CommandBarButton</Type>
 								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.СтруктураТаблицы.StandardCommand.MoveDown</CommandName>
-								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="СтруктураТаблицыКнопкаПереместитьВнизРасширеннаяПодсказка" id="94"/>
 							</Button>
 						</ChildItems>

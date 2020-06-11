@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Width>80</Width>
 	<Height>30</Height>
 	<AutoTitle>false</AutoTitle>
@@ -44,27 +44,27 @@
 						<Button name="ДокументКнопкаСохранить" id="6">
 							<Type>CommandBarButton</Type>
 							<Representation>Picture</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<CommandName>Form.Item.Документ.StandardCommand.Save</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаСохранитьРасширеннаяПодсказка" id="7"/>
 						</Button>
 						<Button name="ДокументКнопкаПечать" id="20">
 							<Type>CommandBarButton</Type>
 							<Representation>Picture</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<CommandName>Form.Item.Документ.StandardCommand.Print</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаПечатьРасширеннаяПодсказка" id="21"/>
 						</Button>
 						<Button name="ДокументКнопкаПредварительныйПросмотр" id="24">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<CommandName>Form.Item.Документ.StandardCommand.Preview</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаПредварительныйПросмотрРасширеннаяПодсказка" id="25"/>
 						</Button>
 						<Button name="ДокументКнопкаПараметрыСтраницы" id="26">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<CommandName>Form.Item.Документ.StandardCommand.PageSetup</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаПараметрыСтраницыРасширеннаяПодсказка" id="27"/>
 						</Button>
 					</ChildItems>
@@ -72,35 +72,35 @@
 				<Button name="ДокументКнопкаОтображатьЗаголовки" id="12">
 					<Type>CommandBarButton</Type>
 					<Representation>Picture</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.Item.Документ.StandardCommand.ShowHeaders</CommandName>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="ДокументКнопкаОтображатьЗаголовкиРасширеннаяПодсказка" id="13"/>
 				</Button>
 				<Button name="ДокументКнопкаРедактирование" id="30">
 					<Type>CommandBarButton</Type>
 					<Representation>Picture</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.Item.Документ.StandardCommand.Edit</CommandName>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="ДокументКнопкаРедактированиеРасширеннаяПодсказка" id="31"/>
 				</Button>
 				<Button name="ДокументКнопкаОбъединить" id="36">
 					<Type>CommandBarButton</Type>
 					<Representation>Picture</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.Item.Документ.StandardCommand.Merge</CommandName>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="ДокументКнопкаОбъединитьРасширеннаяПодсказка" id="37"/>
 				</Button>
 				<Button name="ДокументКнопкаОтменить" id="32">
 					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.Item.Документ.StandardCommand.Undo</CommandName>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="ДокументКнопкаОтменитьРасширеннаяПодсказка" id="33"/>
 				</Button>
 				<Button name="ДокументКнопкаВернуть" id="34">
 					<Type>CommandBarButton</Type>
 					<Representation>Picture</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.Item.Документ.StandardCommand.Redo</CommandName>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="ДокументКнопкаВернутьРасширеннаяПодсказка" id="35"/>
 				</Button>
 				<ButtonGroup name="ГруппаДерево" id="28">
@@ -121,23 +121,23 @@
 						<Button name="ДокументКнопкаОтображатьГруппировки" id="8">
 							<Type>CommandBarButton</Type>
 							<Representation>Picture</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<CommandName>Form.Item.Документ.StandardCommand.ShowGroups</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаОтображатьГруппировкиРасширеннаяПодсказка" id="9"/>
 						</Button>
 						<Button name="ДокументКнопкаСвернутьВсеГруппы" id="14">
 							<Type>CommandBarButton</Type>
 							<Representation>Picture</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<CommandName>Form.Item.Документ.StandardCommand.CollapseAllGroups</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаСвернутьВсеГруппыРасширеннаяПодсказка" id="15"/>
 						</Button>
 						<Button name="ДокументКнопкаРазвернутьВсеГруппы" id="16">
 							<Type>CommandBarButton</Type>
 							<Representation>Picture</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
 							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 							<CommandName>Form.Item.Документ.StandardCommand.ExpandAllGroups</CommandName>
-							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 							<ExtendedTooltip name="ДокументКнопкаРазвернутьВсеГруппыРасширеннаяПодсказка" id="17"/>
 						</Button>
 					</ChildItems>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Width>64</Width>
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -14,7 +14,6 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
-			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>ТаблицаЗначений</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТаблицаЗначенийКонтекстноеМеню" id="2"/>
@@ -29,27 +28,27 @@
 					<Button name="ТаблицаКнопкаСкопировать" id="33">
 						<Type>CommandBarButton</Type>
 						<Representation>Picture</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
 						<CommandName>Form.Item.ТаблицаЗначений.StandardCommand.Copy</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ТаблицаКнопкаСкопироватьРасширеннаяПодсказка" id="34"/>
 					</Button>
 					<Button name="ТаблицаКнопкаУдалить" id="29">
 						<Type>CommandBarButton</Type>
 						<Representation>Picture</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
 						<CommandName>Form.Item.ТаблицаЗначений.StandardCommand.Delete</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ТаблицаКнопкаУдалитьРасширеннаяПодсказка" id="30"/>
 					</Button>
 					<Button name="ТаблицаКнопкаПереместитьВниз" id="25">
 						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>true</OnlyInAllActions>
 						<CommandName>Form.Item.ТаблицаЗначений.StandardCommand.MoveDown</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ТаблицаКнопкаПереместитьВнизРасширеннаяПодсказка" id="26"/>
 					</Button>
 					<Button name="ТаблицаКнопкаПереместитьВверх" id="27">
 						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>true</OnlyInAllActions>
 						<CommandName>Form.Item.ТаблицаЗначений.StandardCommand.MoveUp</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ТаблицаКнопкаПереместитьВверхРасширеннаяПодсказка" id="28"/>
 					</Button>
 					<Button name="ТаблицаЗначенийКомандаОчистить" id="35">
@@ -105,6 +104,7 @@
 					<Type>CommandBarButton</Type>
 					<DefaultButton>true</DefaultButton>
 					<DefaultItem>true</DefaultItem>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.Command.КомандаОК</CommandName>
 					<Title>
 						<v8:item>
@@ -112,12 +112,12 @@
 							<v8:content>ОК</v8:content>
 						</v8:item>
 					</Title>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="КнопкаОКРасширеннаяПодсказка" id="22"/>
 				</Button>
 				<Button name="КомандаОтмена" id="23">
 					<Type>CommandBarButton</Type>
 					<Representation>PictureAndText</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
 					<CommandName>Form.StandardCommand.Close</CommandName>
 					<Title>
 						<v8:item>
@@ -125,7 +125,6 @@
 							<v8:content>Отмена</v8:content>
 						</v8:item>
 					</Title>
-					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="КомандаОтменаРасширеннаяПодсказка" id="24"/>
 				</Button>
 			</ChildItems>
