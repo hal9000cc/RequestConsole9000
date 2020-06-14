@@ -1,0 +1,1360 @@
+﻿<Structure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Structure">
+	<Property name="Формат">
+		<Value xsi:type="xs:string">КонсольЗапросов9000</Value>
+	</Property>
+	<Property name="Версия">
+		<Value xsi:type="xs:decimal">10</Value>
+	</Property>
+	<Property name="КоличествоЗапросов">
+		<Value xsi:type="xs:decimal">25</Value>
+	</Property>
+	<Property name="ИмяФайла">
+		<Value xsi:type="xs:string">C:\Users\kuza\Desktop\RequestConsole9000_git\examples\Параметры всех типов.q9</Value>
+	</Property>
+	<Property name="Опции">
+		<Value xsi:type="Structure">
+			<Property name="ОпцияОграничениеВыводимыхСтрокПервые">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОпцияОграничениеВыводимыхСтрокПервыеВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ОпцияОграничениеВыводимыхСтрок">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОпцияОграничениеВыводимыхСтрокВкл">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияСохранятьКомментарии">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияАвтосохранениеПередВыполнениемЗапроса">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияВидРезультата">
+				<Value xsi:type="xs:string">таблица</Value>
+			</Property>
+			<Property name="ОпцияОбрабатывать__">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияИнтервалОбновленияВыполненияАлгоритма">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОпцияИнтервалАвтосохранения">
+				<Value xsi:type="xs:decimal">60</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="ПакетЗапросов">
+		<Value xsi:type="Array">
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запрос1</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Ссылка КАК Ссылка
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	0 = 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СтатьиКалькуляции.Ссылка КАК Ссылка,
+	СтатьиКалькуляции.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.СтатьиКалькуляции КАК СтатьиКалькуляции
+ГДЕ
+	СтатьиКалькуляции.Ссылка = &amp;справочник
+	И СтатьиКалькуляции.Предопределенный
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string">//Сообщить(Выборка.Ссылка);
+Выборка.Следующий();
+об = Выборка.Ссылка.ПолучитьОбъект();
+об.Записать();</Value>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">3</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">23</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">строка</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">тестовый параметр</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:string">тестовый параметр</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">число</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:decimal</Type>
+										<NumberQualifiers>
+											<Digits>0</Digits>
+											<FractionDigits>0</FractionDigits>
+											<AllowedSign>Any</AllowedSign>
+										</NumberQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:decimal">555</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:decimal">555</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">булево</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:boolean</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:boolean">false</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:boolean">false</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">дата</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>Date</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2020-01-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2020-01-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">датавремя</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">граница</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:Bound</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">15.03.2020 0:20:00 Исключая</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Граница</Value>
+										</Property>
+										<Property name="ВидГраницы">
+											<Value xsi:type="xs:string">Исключая</Value>
+										</Property>
+										<Property name="Значение">
+											<Value xsi:type="xs:dateTime">2020-03-15T00:20:00</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">15.03.2020 0:20:00 Исключая</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">момент_времени</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:PointOfTime</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">31.03.2017 23:59:59;Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">МоментВремени</Value>
+										</Property>
+										<Property name="Дата">
+											<Value xsi:type="xs:dateTime">2017-03-31T23:59:59</Value>
+										</Property>
+										<Property name="Ссылка">
+											<Value xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:DocumentRef.РеализацияТоваровУслуг">d94e29d2-d5b3-11e7-8e50-0050568b35ac</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">31.03.2017 23:59:59;Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">6</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">null</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>Null</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="Null"/>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Null"/>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">7</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">вид_движения_накопления</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccumulationRecordType</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Expense</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Expense</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">8</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">вид_движения_бухгалтерии</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccountingRecordType</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">9</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">план_счетов</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">10</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">вид_счета</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccountType</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">11</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">тип_число</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>Type</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Тип: Число</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Тип</Value>
+										</Property>
+										<Property name="ИмяТипа">
+											<Value xsi:type="xs:string">Число</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">Тип: Число</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">12</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">тип_ссылка</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>Type</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Тип: Валюта</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Тип</Value>
+										</Property>
+										<Property name="ИмяТипа">
+											<Value xsi:type="xs:string">СправочникСсылка.Валюты</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">Тип: Валюта</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">13</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">уникальный_идентификатор</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>UUID</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ac</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ac</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">14</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">все_справочники</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторПродукцииПоВидамДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетКомиссионераПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоступлениеБезналичныхДенежныхСредствПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПапкиЭлектронныхПисем</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДополнительныеВнешниеКомпоненты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпособыОтраженияЗарплатыВБухУчете</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыПодтверждающихДокументов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СообщениеОбменСБанкамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиФинансированияЗарплата</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПланПроизводстваПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СведенияОЗастрахованныхЛицахСЗВ_МПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоответствияСчетовМеждународногоУчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РолиКонтактныхЛицПартнеров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СценарииПооперационногоПланирования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТаможеннаяДекларацияИмпортПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КодыОперацийРаздела7ДекларацииПоНДС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШтрихкодыУпаковокТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УченыеСтепени</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МестаРаботы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СведенияОСтраховомСтажеЗастрахованныхЛицСЗВ_СТАЖПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПеремещениеВДругоеПодразделениеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбщиеДанныеИнформационногоЦентра</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетПереработчикаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СезонныеГруппыБизнесРегионов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетФактураКомитентаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БланкиСтрогойОтчетности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрофессииРабочих</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоступлениеОтПереработчикаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВозвратСырьяОтПереработчикаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДвижениеПродукцииИМатериаловПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МакетыПенсионныхДелПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СделкиСКлиентамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МоделиПооперационногоПланирования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассыОбъектовЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОснованияДосрочногоНазначенияПенсии</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Заметки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказКлиентаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрочиеДоходыРасходыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДоходовПоСтраховымВзносам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетФактураВыданныйАвансПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВозвратСырьяДавальцуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВыкупПринятыхНаХранениеТоваровПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыСделокСКлиентамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПараметрыИсчисляемогоСтраховогоСтажа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоставыВоеннослужащих</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТерриторииОсуществленияТорговойДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетФактураПолученныйПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОжидаемоеПоступлениеДенежныхСредствПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьГосударственныеКонтрактыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьСтатусыНалогоплательщиковПоНДФЛ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыНалоговыхОрганов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказНаПроизводство2_2ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МаркетинговыеМероприятия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КартыЛояльности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НастройкиОбменСБанками</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаПолученияФактаПоПоказателямБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлючиАналитикиУчетаПартий</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьНалоговыеОрганы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СценарииОбменовДанными</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьСертификатыЭП</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодклассыОбъектовЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказНаВнутреннееПотреблениеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыОперацийРасчетаЗарплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СписаниеПринятыхНаХранениеТоваровПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыДоступаПартнеров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпособыОбеспеченияПотребностей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИзменениеКвалификационногоРазрядаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоверенностиНалогоплательщика</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Работодатели</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыТарифовСтраховыхВзносов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СкладскиеЯчейки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыМехаГИСМ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОчередьЗаданий</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыСтажа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказМатериаловВПроизводствоПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныЗаданийОчереди</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Должности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтпускПоУходуЗаРебенкомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетКомиссионераОСписанииПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОснованияИсчисляемогоСтраховогоСтажа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьСерверыДокументооборота</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭлектронныеПредставленияРегламентированныхОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭтапыПодготовкиБюджетовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыРемонтов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОсобыеУсловияТрудаПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УпаковкиЕдиницыИзмерения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПартнерыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьПерепискаСКонтролирующимиОрганами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПакетЭДПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтпускБезСохраненияОплатыСпискомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОписьОДВ_1ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГИСМПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетОператораСистемыПлатонПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатусыНалогоплательщиковПоНДФЛ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиКалькуляции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВосстановлениеВДолжностиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Сотрудники</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьНаВыплатуЗарплатыПеречислениемПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныАнкет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПолныеПутиКФормам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипоразмерыЯчеек</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОсобыеУсловияТрудаПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтправкиРПН</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриемкаТоваровНаХранениеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриоритетыОплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СправкиНДФЛДляПередачиВНалоговыйОрганПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СерииНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТомаХраненияФайлов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОснованияИсчисляемогоСтраховогоСтажа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СовмещениеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МакетыПенсионныхДел</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеОрганы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДокументовВводДанныхДляРасчетаЗарплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыДоступаВидовБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПапкиФайлов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НематериальныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипыСобытийСПАРКРиски</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыРаботСотрудников</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаявкаНаЗакрытиеЛицевыхСчетовСотрудниковПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РаспределениеВозвратныхОтходовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТранспортноеСообщениеКонтейнерыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭкземплярБюджетаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыДоступа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыФинансовыхОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДенежныеДокументы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗамещениеГосударственныхМуниципальныхДолжностейПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АктОРасхожденияхПослеОтгрузкиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РегистрацияЦенНоменклатурыПоставщикаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныОтменыЗаказовПоставщикам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВозвратТоваровМеждуОрганизациямиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВнешниеПользователи</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГодовыеГрафикиАмортизацииОС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаявлениеОПодтвержденииПраваНаЗачетАвансовПоНДФЛПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчетныеПолитикиОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Валюты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОрганыФСГС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпособыВыплатыЗарплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтпускПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОплатаПоСреднемуЗаработкуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТаможеннаяДекларацияЭкспортПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыРассылокИОповещений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыВыплатБывшимСотрудникам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РеализацияУслугПрочихАктивовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИсторияПроверкиИКорректировкиДанных</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПередачаСырьяПереработчикуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГосударственныеКонтракты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыОбщественноПолезнойДеятельностиСЗВК</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БанковскиеСчетаКонтрагентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СегментыПартнеров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗадачиПроектов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтепениРодстваФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДоговоровАвторскогоЗаказа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КомплектыОтчетностиПерсучета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РолиИсполнителей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РеестрДСВ_3ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УслугиСервиса</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Справки2ЕГАИС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовАДВ_2ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыФинансовогоУчетаДоходовРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриобретениеУслугПрочихАктивовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПерепискаСКонтролирующимиОрганами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыМеждуОрганизациями</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОрганыПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторСпециальностейПоОбразованию</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбщероссийскийКлассификаторОсновныхФондов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УсловияПредоставленияСкидокНаценок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныМагнитныхКарт</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовАДВ_3ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтменаСовмещенияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТранспортныеСредства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКонтрагентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВерсииМобильныхПриложений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПланЗакупокПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаявкаНаРасходованиеДенежныхСредствПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПланПродажПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДоходовНДФЛ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторТНВЭД</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПланПродажПоКатегориямПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Бригады</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗначенияСвойствОбъектовИерархия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПереводКДругомуРаботодателюПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчетныеЗаписиСинхронизацииФайлов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыДоходовНДФЛ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоглашенияСКлиентамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПростойСотрудниковПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоглашенияСПоставщиками</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипыДокументовПодтверждающихЛьготуНДС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПакетОбменСБанкамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтроковыеКонтактыВзаимодействий</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СписаниеЗадолженностиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РесурсныеСпецификации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбщиеВидыРемонтов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КассыККМ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Военкоматы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТерриториальныеУсловияПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоставляемыеРасширения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОчередьЭлектронныхЧековКОтправке</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтраслиНауки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Организации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СкидкиНаценки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КоллекцииНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтруктураПредприятия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторОрганизацийЕГАИС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПроизводствоБезЗаказаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКонтрагентовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КадровыйПереводСпискомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОписиИсходящихДокументовВНалоговыеОрганы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЛентыНовостей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтражениеРасхожденийПриИнкассацииДенежныхСредствПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭтапыПодготовкиБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныВводаНефинансовыхПоказателей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Новости</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПроектыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыЗапасов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТерриторииВыполненияРабот</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КатегорииЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыСтроительства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭлементыФинансовыхОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦелевыеСредства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыЦен</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыВычетовНДФЛ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Сайты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УбыткиПрошлыхЛет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Пользователи</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипыПлатежейФЗ275</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОписиВходящихДокументовИзНалоговыхОрганов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКредитовИДепозитов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныОтменыЗаказовКлиентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПланСборкиРазборкиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьПараметрыИсчисляемогоСтраховогоСтажа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РеализацияТоваровУслугПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыСправок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПользовательскиеНастройкиОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодтверждениеОткрытияЛицевыхСчетовСотрудниковПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Марки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторБанков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВопросыШаблонаАнкеты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИдентификаторыОбъектовРасширений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтветственныеЛицаОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыНМАМеждународныйУчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныСообщенийПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриобретениеУслугПоЛизингуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МоделиБюджетированияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлючиАналитикиУчетаПартийПроизводства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаявлениеАбонентаСпецоператораСвязиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлючевыеОперации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗначенияСвойствОбъектов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДокументовОбОбразовании</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОтправкиФСС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтправкиФТС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипыИнформацииИнформационногоЦентра</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РегистрУчетаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТиповыеОперацииМеждународныйУчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоказателиБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКредитовИДепозитовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказПоставщикуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПереводНаОплатуПоСреднемуЗаработкуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтрокиОтчетностиМониторингаРаботниковСоциальнойСферы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЕдиныеНормыАмортизационныхОтчисленийОсновныхФондов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказПереработчикуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РассылкаКлиентамПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МаршрутныеКартыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыВнешнихПользователей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыПользователей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗакладкиВзаимодействий</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПретензииКлиентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НаборыУпаковок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыНалоговыхОрганов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиРасходовЗарплата</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаОбработкиЭлектроннойПочты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовСЗВ_6_1ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыПрочихДоходовФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьУчетныеЗаписиДокументооборота</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДанныеОКорректировкеСведенийЗастрахованныхЛицСЗВ_КОРРПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДвиженияДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Справки1ЕГАИС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыИспользованияРабочегоВремени</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыПланов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТранспортнаяНакладнаяПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаказДавальцаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПолитикиУчетаСерий</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоглашенияСКлиентами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗапланированноеВзаимодействиеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МаршрутныеКарты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БанковскиеСчетаОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПартииТМЦВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыТарифовСтраховыхВзносов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтгрузкаТоваровСХраненияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РолиКонтактныхЛицВСделкахИПроектах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Контрагенты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтруктураЦелей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлючиАналитикиУчетаПоПартнерам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаРаспределенияРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Файлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыМеждуОрганизациямиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НаборыДополнительныхРеквизитовИСведений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоказателиНаработки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТехнологическиеОперацииПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьНаВыплатуЗарплатыРаздатчикомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИзменениеУсловийОплатыОтпускаПоУходуЗаРебенкомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НастройкиРМК</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МоделиБюджетирования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОснованияДосрочногоНазначенияПенсииДляСЗВК</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГрафикиРаботыСотрудников</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИнформационныеСсылкиДляФорм</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбластиХранения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РассылкиОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СообщенияСистемы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГорячиеКлавиши</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыЦенПоставщиков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РолиПартнеровВСделкахИПроектах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВнутреннееПотреблениеТоваровПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НоменклатураПоставщиков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СправкиФизическихЛицПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СканированныеДокументыДляПередачиВЭлектронномВидеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОсобыеУсловияТрудаДляСЗВКПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДокументовФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыКартЛояльности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьПрочихДоходовПеречислениемПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныВозникновенияПретензий</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РейтингиПродажНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОснованияДосрочногоНазначенияПенсии</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РаботаСверхурочноПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АктВыполненныхРаботПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПерепискаСКонтролирующимиОрганамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АктВыполненныхВнутреннихРаботПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПретензииКлиентовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПризПодарокПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоответствияОборотовМеждународногоУчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыСтатистическогоНаблюдения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьНаВыплатуЗарплатыВКассуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипоразмерыУпаковок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыНоменклатурыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыДоступаСтатейИПоказателейБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныПроигрышаСделок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПредопределенныеВариантыОтчетовРасширений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИнвентаризацияРасчетовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПередачаМатериаловВПроизводствоПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыОтправляемыхДокументов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РегламентированныйОтчетПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ХарактеристикиНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыАнализаЦелевыхПоказателей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчетныеПолитикиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоляФормСтатистики</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СхемыОбеспечения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РаботаВВыходныеИПраздничныеДниПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОрганизацииПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатистическиеПоказатели</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УвольнениеСпискомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СерверыДокументооборота</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РабочиеМеста</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭтапыПроизводства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыФинансовогоУчетаВнеоборотныхАктивов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПремияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШтатноеРасписание</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорЗаймаСотрудникуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаЛимитовПоДаннымБюджетирования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Субконто</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыСотрудников</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Партнеры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СертификатыНоменклатурыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпособыОпределенияЦенКонтролируемыхСделок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТранспортноеСообщениеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГрафикиОплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПроизводственныеКалендари</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныПроводокДляМеждународногоУчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорАвторскогоЗаказаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыВычетовНДФЛ</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РежимыРаботыСотрудников</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Назначения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыКомплектацииНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыДоступаФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОграничениеВзысканийПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодарочныеСертификаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦиклыОбмена</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыФинансовогоУчетаРасчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПроверкиСостоянияСистемы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НаправленияИспользованияПрибыли</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаданиеТорговомуПредставителюПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаявкаНаОткрытиеЛицевыхСчетовСотрудниковПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Награды</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СостоянияПроцессов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтрокиОтчетностиРасходовИЧисленностиРаботниковГосударственныхОрганов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоставляемыеДополнительныеОтчетыИОбработки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЯзыкиНародовМира</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрочиеАктивыПассивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпособыРаспределенияПоНаправлениямДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетКомитентуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныСписанияОС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДокументыРеализацииПолномочийНалоговыхОрганов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоставщикиУслугСервиса</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СертификатыКлючейЭлектроннойПодписиИШифрования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Приоритеты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоставляемыеДанные</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныНеудовлетворенияПервичногоСпроса</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыАлкогольнойПродукции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФизическиеЛицаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетНаОплатуКлиентуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РазрядыКатегорииДолжностей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыГрафиковКредитовИДепозитов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетДавальцуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗарплатныеПроекты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПереченьДолжностейДляБронированияГраждан</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СверкаВзаиморасчетовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СправкиФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОчередьЗаданийОбластейДанных</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УстановкаЦенНоменклатурыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СкладскиеГруппыНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВыкупВозвратнойТарыУПоставщикаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗначенияКатегорийНовостей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьПрочихДоходовВБанкПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПричиныЗадержкиВыполненияЭтаповПроизводства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтчетКомитентуОСписанииПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВозвратИзОтпускаПоУходуЗаРебенкомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОснованияУвольнения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УченыеЗвания</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БонусныеПрограммыЛояльности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РабочиеУчастки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпособыОкругленияПриРасчетеЗарплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТарифыПлатежныхАгентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыФинансовогоУчетаДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КомандировкаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МаркетинговыеМероприятияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетФактураВыданныйПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВерсииРасширений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаПолученияФактаПоСтатьямБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НастройкиХозяйственныхОпераций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НаправленияСдачиОтчетности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыКлассификацииЗадолженности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбщиеВнешниеКомпоненты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПараметрыКонтекстныхФункциональныхОпций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АктОРасхожденияхПослеПриемкиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьОснованияУвольнения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СпискиПрофессийДолжностейЛьготногоПенсионногоОбеспечения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыФинансовогоУчетаНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтраныМира</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РегистрацияПрочихДоходовПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КорректировкаПриобретенияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыОСМеждународныйУчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДополнительныеОтчетыИОбработки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодтверждениеЗачисленияЗарплатыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаРазделов6РасчетаРСВ_1ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СменыРаботыСотрудников</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьНаВыплатуЗарплатыВБанкПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтправкиФСРАР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СообщениеSMSПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетФактураПолученныйАвансПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыДоступаНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РабочиеЦентры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВзаимозачетЗадолженностиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВыкупВозвратнойТарыКлиентомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Производители</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоглашенияСПоставщикамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовДСВ_1ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КатегорииЦелей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыОтпусков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СделкиСКлиентами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФорматыМагазинов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СообщенияОбластейДанных</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РесурсныеСпецификацииПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчетныеЗаписиДокументооборота</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УсловияТруда</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НастройкиПродажДляПользователей</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦенныеБумаги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СправкиСПАРКРискиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АктПриемкиВыполненныхРаботОказанныхУслугПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НомераГТД</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыЛизингаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаданиеНаПеревозкуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦеновыеГруппы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовСПВ_2ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НаправленияДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныЭтикетокИЦенников</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыСтроительстваПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлючиАналитикиУчетаНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СоглашенияОбИспользованииЭД</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыОбщественноПолезнойДеятельностиСЗВК</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СеансыСвязиСКонтролирующимиОрганами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоступлениеТоваровПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПереносОтпускаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Кассы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СобытияОС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыДоходовПоСтраховымВзносам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПередачаТоваровМеждуОрганизациямиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыОтветовАнкет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОсобыеУсловияТрудаДляСЗВКПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВариантыНаладки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПредопределенныеВариантыОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыОповещенийКлиентам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыЛизинга</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АвансовыйОтчетПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СведенияОЗаработкеСтажеЗастрахованныхЛицСЗВ_ИСХПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СобытияОтправкиОтчетности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗванияГражданскогоВоинскогоУчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыИсполнителейЗадач</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыРабочихЦентров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИсторияПроверкиИКорректировкиДанныхПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Сертификаты1СОтчетности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СписаниеБезналичныхДенежныхСредствПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтправкиФСС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СканированныеДокументыДляПередачиВЭлектронномВиде</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрограммыЭлектроннойПодписиИШифрования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОснованияЗаключенияСрочныхТрудовыхДоговоров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РодственникиФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЕГАИСПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.АктОРасхожденияхПослеПеремещенияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КонтактныеЛицаПартнеров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовСЗВ_6_3ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодключаемоеОборудование</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбразованиеФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыРегистровУчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриобретениеТоваровУслугПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФизическиеЛица</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДрагоценныеМатериалы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтправкиОтчетности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВнешниеКомпоненты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьУплатыАДВ_11ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МатериальнаяПомощьПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыСвязейМеждуПартнерами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовАДВ_1ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыОбразованияФизическихЛиц</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭквайринговыеТерминалы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьКомплектыВедомостейНаВыплатуЗарплатыЧерезБанк</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РегистрацииВНалоговомОргане</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЛицензииПоставщиковАлкогольнойПродукции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоступлениеСырьяОтДавальцаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СезонныеГруппы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СегментыНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбщероссийскийКлассификаторПродукции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовСЗВ_КПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчетныеЗаписиЭлектроннойПочты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СертификатыНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТехнологическиеОперации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаОбменаСПодключаемымОборудованиемOffline</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МаршрутыПодписания</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КассовыеКниги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовСЗВ_6_4ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтепениЗнанияЯзыка</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БизнесРегионы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УведомлениеОСпецрежимахНалогообложенияПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КомплектыФинансовыхОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗоныДоставки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДрайверыОборудования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОплатаДнейУходаЗаДетьмиИнвалидамиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыПодарочныхСертификатов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СкладскиеПомещения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФормыСтатистики</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВозвратТоваровПоставщикуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПачкаДокументовСПВ_1ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЭДПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СценарииТоварногоПланирования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МедицинскиеОрганизации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ШаблоныСообщений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЗаявкаНаВозвратТоваровОтКлиентаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РегламентированныеОтчеты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьДокументыРеализацииПолномочийНалоговыхОрганов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Проекты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыОтправляемыхДокументов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрофилиНастроекЭДО</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РеестрСЗВ_6_2ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВозвратТоваровОтКлиентаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИсточникиДанныхПланирования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодпискиНаРассылкиИОповещенияКлиентам</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьТерриториальныеУсловияПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчетныеПолитики</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрочиеРасходы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НефинансовыеПоказателиБюджетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КадровыйПереводПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НоменклатураПоставщиковПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВедомостьПрочихДоходовВКассуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КомплектыОтчетностиПерсучетаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВстречаПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РемонтныеМероприятия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СкладскиеГруппыУпаковок</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаИнтеграцииС1СДокументооборотом</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КорректировкаРеализацииПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УсловияОбслуживанияПартнеровТорговымиПредставителями</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыДефектов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УчебныеЗаведения</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КоммерческоеПредложениеКлиентуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВерсииФайлов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.МобильныеКомпьютеры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппировкиТоварныхОграничений</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьЭлектронныеПредставленияРегламентированныхОтчетов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыСвязейМеждуФизЛицами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриемНаРаботуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Сценарии</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПравилаНачисленияИСписанияБонусныхБаллов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТорговыеТочки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыСделокСКлиентами</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОснованияДосрочногоНазначенияПенсииДляСЗВК</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НастройкиЯндексКассы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорРаботыУслугиПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОрганыПФР</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПриемНаРаботуСпискомПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Резервы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьВидыОбъектовЕГАИС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрофилиГруппДоступа</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрофилиКлючевыхОпераций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОтпускБезСохраненияОплатыПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ГруппыАналитическогоУчетаНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторУслугНаселению</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОписьПачекСЗВ_6ПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УдалитьРегламентированныеОтчеты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлассификаторВидовЭкономическойДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КлючиАналитикиУчетаНаборов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НоменклатураПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СостояниеВБраке</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИдентификаторыОбъектовМетаданных</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТоварныеКатегории</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипыТранспортныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Календари</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УзлыОбъектовЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТелефонныйЗвонокПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТарифныеСетки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПередачаДавальцуПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.УвольнениеПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БольничныйЛистПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыКонтактнойИнформации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрожиточныеМинимумы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НемонетарныеПоказатели</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПоказателиРасчетаЗарплаты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СчетФактураКомиссионеруПрисоединенныеФайлы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ИзменениеУсловийДоговораЗаймаСотрудникуПрисоединенныеФайлы</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">f178c63e-c549-11e7-8e50-0050568b35ac</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">f178c63e-c549-11e7-8e50-0050568b35ac</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">15</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">справочник</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиКалькуляции</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">16</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">документ</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияТоваровУслуг</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:DocumentRef.РеализацияТоваровУслуг">40a3f530-15e0-11e7-80c8-708bcd551c7e</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:DocumentRef.РеализацияТоваровУслуг">40a3f530-15e0-11e7-80c8-708bcd551c7e</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">17</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">перечисление</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.ВариантыОказанияУслуг</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:EnumRef.ВариантыОказанияУслуг">ОрганизациейПоАгентскойСхеме</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:EnumRef.ВариантыОказанияУслуг">ОрганизациейПоАгентскойСхеме</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">18</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">план_видов_характеристик</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfCharacteristicTypesRef.СтатьиДоходов</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCharacteristicTypesRef.СтатьиДоходов">260937cc-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCharacteristicTypesRef.СтатьиДоходов">260937cc-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">19</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">план_видов_расчета</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfCalculationTypesRef.Начисления</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCalculationTypesRef.Начисления">2609369b-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCalculationTypesRef.Начисления">2609369b-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">20</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">бизнес_процесс</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:BusinessProcessRef.Задание</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:BusinessProcessRef.Задание">c089f56b-ae84-11ea-b0de-ccaca8a9d013</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:BusinessProcessRef.Задание">c089f56b-ae84-11ea-b0de-ccaca8a9d013</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">21</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">задача</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:TaskRef.ЗадачаИсполнителя</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:TaskRef.ЗадачаИсполнителя">3d6c551f-fade-11e4-92f1-0050568b35ac</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:TaskRef.ЗадачаИсполнителя">3d6c551f-fade-11e4-92f1-0050568b35ac</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">22</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">план_обмена</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ExchangePlanRef.Полный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ExchangePlanRef.Полный">a5275e0e-d307-481e-9ec4-1c58826db850</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ExchangePlanRef.Полный">a5275e0e-d307-481e-9ec4-1c58826db850</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">23</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.015</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запрос24</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">0 / 0:00:00</Value>
+				</Property>
+			</Value>
+		</Value>
+	</Property>
+</Structure>

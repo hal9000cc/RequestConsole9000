@@ -336,6 +336,7 @@
 			<Form>ФормаТабличногоДокумента</Form>
 			<Form>ВыборПредопределенного</Form>
 			<Form>Справка</Form>
+			<Form>ФормаКода</Form>
 			<Template>Картинки</Template>
 			<Template>СправкаАлгоритм</Template>
 		</ChildObjects>
