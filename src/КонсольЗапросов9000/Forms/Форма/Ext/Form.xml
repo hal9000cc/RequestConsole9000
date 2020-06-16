@@ -597,6 +597,11 @@
 													</Picture>
 													<ExtendedTooltip name="ВставитьПредопределенноеЗначениеРасширеннаяПодсказка" id="366"/>
 												</Button>
+												<Button name="ПолучитьКодСПараметрами" id="394">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ПолучитьКодСПараметрами</CommandName>
+													<ExtendedTooltip name="ПолучитьКодСПараметрамиРасширеннаяПодсказка" id="395"/>
+												</Button>
 											</ChildItems>
 										</CommandBar>
 										<TextDocumentField name="ТекстЗапроса" id="1">
@@ -3098,7 +3103,13 @@
 					<v8:content>Получить код выполнения запроса на встроенном языке с параметрами</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>Ctrl+Shift+F9</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>Команда_ПолучитьКодСПараметрами</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="УдалитьПерехваченныеЗапросы" id="31">
 			<Title>

@@ -1,18 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
-	<CommandBarLocation>None</CommandBarLocation>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Width>100</Width>
+	<Height>30</Height>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<HTMLDocumentField name="Текст" id="1">
+		<TextDocumentField name="Текст" id="1">
 			<DataPath>Текст</DataPath>
 			<TitleLocation>None</TitleLocation>
 			<ContextMenu name="ТекстКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ТекстРасширеннаяПодсказка" id="3"/>
-		</HTMLDocumentField>
-		<CommandBar name="ГруппаКоманднаяПанельВнизу" id="4">
+		</TextDocumentField>
+		<CommandBar name="ГруппаКоманднаяПанельВнизу" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -25,19 +28,15 @@
 					<v8:content>Группа командная панель внизу</v8:content>
 				</v8:item>
 			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="ГруппаКоманднаяПанельВнизуРасширеннаяПодсказка" id="5"/>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельВнизуРасширеннаяПодсказка" id="7"/>
 			<ChildItems>
-				<Button name="КнопкаЗакрыть" id="6">
+				<Button name="ФормаЗакрыть" id="4">
 					<Type>CommandBarButton</Type>
 					<Representation>PictureAndText</Representation>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 					<CommandName>Form.StandardCommand.Close</CommandName>
-					<Picture>
-						<xr:Ref>StdPicture.Close</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="КнопкаЗакрытьРасширеннаяПодсказка" id="7"/>
+					<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="5"/>
 				</Button>
 			</ChildItems>
 		</CommandBar>
@@ -57,11 +56,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
