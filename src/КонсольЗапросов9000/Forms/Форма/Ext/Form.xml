@@ -3130,5 +3130,20 @@
 			</Picture>
 			<Action>Команда_УдалитьПерехваченныеЗапросы</Action>
 		</Command>
+		<Command name="ПанельВременныхТаблиц" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель временных таблиц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Команда_ПанельВременныхТаблиц</Action>
+		</Command>
 	</Commands>
 </Form>
