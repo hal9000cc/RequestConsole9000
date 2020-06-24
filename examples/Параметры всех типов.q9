@@ -3,7 +3,7 @@
 		<Value xsi:type="xs:string">КонсольЗапросов9000</Value>
 	</Property>
 	<Property name="Версия">
-		<Value xsi:type="xs:decimal">10</Value>
+		<Value xsi:type="xs:decimal">11</Value>
 	</Property>
 	<Property name="КоличествоЗапросов">
 		<Value xsi:type="xs:decimal">25</Value>
@@ -11,28 +11,38 @@
 	<Property name="ИмяФайла">
 		<Value xsi:type="xs:string">C:\Users\kuza\Desktop\RequestConsole9000_git\examples\Параметры всех типов.q9</Value>
 	</Property>
-	<Property name="Опции">
+	<Property name="СохраняемыеСостояния">
 		<Value xsi:type="Structure">
-			<Property name="ОпцияОграничениеВыводимыхСтрокПервые">
-				<Value xsi:type="xs:decimal">1000</Value>
-			</Property>
-			<Property name="ОпцияОграничениеВыводимыхСтрокПервыеВкл">
+			<Property name="УстановитьЗначенияПараметров">
 				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
-			<Property name="ОпцияОграничениеВыводимыхСтрок">
-				<Value xsi:type="xs:decimal">1000</Value>
-			</Property>
-			<Property name="ОпцияОграничениеВыводимыхСтрокВкл">
+			<Property name="ВидимостьПакетаРезультатаЗапроса">
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
+			<Property name="ВидРезультата">
+				<Value xsi:type="xs:string">таблица</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрок">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокВкл">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервые">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервыеВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Опции">
+		<Value xsi:type="Structure">
 			<Property name="ОпцияСохранятьКомментарии">
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="ОпцияАвтосохранениеПередВыполнениемЗапроса">
 				<Value xsi:type="xs:boolean">true</Value>
-			</Property>
-			<Property name="ОпцияВидРезультата">
-				<Value xsi:type="xs:string">таблица</Value>
 			</Property>
 			<Property name="ОпцияОбрабатывать__">
 				<Value xsi:type="xs:boolean">true</Value>
@@ -52,7 +62,7 @@
 					<Value xsi:type="xs:string">Запрос1</Value>
 				</Property>
 				<Property name="ТекстЗапроса">
-					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 5
+					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 51
 	Номенклатура.Ссылка КАК Ссылка,
 	Номенклатура.Наименование КАК Наименование,
 	Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения
@@ -1666,7 +1676,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">6 / 0:00:00.010</Value>
+					<Value xsi:type="xs:string">6 / 0:00:00.012</Value>
 				</Property>
 			</Value>
 			<Value xsi:type="Structure">

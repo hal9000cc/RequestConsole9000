@@ -85,7 +85,7 @@
 					</ChildItems>
 				</CommandBar>
 				<CheckBoxField name="ОпцияОграничениеВыводимыхСтрокПервыеВкл" id="263">
-					<DataPath>ОпцияОграничениеВыводимыхСтрокПервыеВкл</DataPath>
+					<DataPath>ОграничениеВыводимыхСтрокПервыеВкл</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ОпцияОграничениеВыводимыхСтрокПервыеВклКонтекстноеМеню" id="264"/>
@@ -95,7 +95,7 @@
 					</Events>
 				</CheckBoxField>
 				<InputField name="ОпцияОграничениеВыводимыхСтрокПервые" id="260">
-					<DataPath>ОпцияОграничениеВыводимыхСтрокПервые</DataPath>
+					<DataPath>ОграничениеВыводимыхСтрокПервые</DataPath>
 					<Enabled>false</Enabled>
 					<Title>
 						<v8:item>
@@ -167,7 +167,7 @@
 							<v8:content>Группа список запросов</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Width>35</Width>
+					<Width>36</Width>
 					<PagesRepresentation>TabsOnBottom</PagesRepresentation>
 					<ExtendedTooltip name="ГруппаСписокЗапросовРасширеннаяПодсказка" id="187"/>
 					<ChildItems>
@@ -1166,6 +1166,7 @@
 					<ExtendedTooltip name="ГраппуКоманднаяПанельРезультатаРасширеннаяПодсказка" id="236"/>
 					<ChildItems>
 						<UsualGroup name="КоманднаяПанельЛево" id="248">
+							<Enabled>false</Enabled>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1183,93 +1184,157 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="КоманднаяПанельЛевоРасширеннаяПодсказка" id="249"/>
 							<ChildItems>
-								<InputField name="ВидРезультата" id="290">
-									<DataPath>ОпцияВидРезультата</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<Width>5</Width>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>7</MaxWidth>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ChoiceList>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>таблица</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:string">таблица</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>дерево</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:string">дерево</Value>
-											</xr:Value>
-										</xr:Item>
-									</ChoiceList>
-									<ContextMenu name="ВидРезультатаКонтекстноеМеню" id="291"/>
-									<ExtendedTooltip name="ВидРезультатаРасширеннаяПодсказка" id="292"/>
-								</InputField>
-								<Button name="ОбновитьРезультат" id="293">
-									<Type>UsualButton</Type>
-									<Representation>Picture</Representation>
-									<CommandName>Form.Command.ОбновитьРезультат</CommandName>
-									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-									<ExtendedTooltip name="ОбновитьРезультатРасширеннаяПодсказка" id="294"/>
-								</Button>
-								<CheckBoxField name="ОпцияОграничениеВыводимыхСтрокВкл" id="266">
-									<DataPath>ОпцияОграничениеВыводимыхСтрокВкл</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ОпцияОграничениеВыводимыхСтрокВклКонтекстноеМеню" id="267"/>
-									<ExtendedTooltip name="ОпцияОграничениеВыводимыхСтрокВклРасширеннаяПодсказка" id="268"/>
-									<Events>
-										<Event name="OnChange">ОпцияОграничениеВыводимыхСтрокВклПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<InputField name="ОпцияОграничениеВыводимыхСтрок" id="245">
-									<DataPath>ОпцияОграничениеВыводимыхСтрок</DataPath>
-									<Enabled>false</Enabled>
+								<UsualGroup name="ГруппаУправлениеРезультатомЗапроса" id="426">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Ограничение строк</v8:content>
+											<v8:content>Группа управление результатом запроса</v8:content>
 										</v8:item>
 									</Title>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>4</MaxWidth>
-									<ContextMenu name="ОпцияОграничениеВыводимыхСтрокКонтекстноеМеню" id="246"/>
-									<ExtendedTooltip name="ОпцияОграничениеВыводимыхСтрокРасширеннаяПодсказка" id="247"/>
-									<Events>
-										<Event name="OnChange">ОпцияОграничениеВыводимыхСтрокПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="РезультатВПакете" id="242">
-									<DataPath>РезультатВПакете</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>18</MaxWidth>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ChooseType>false</ChooseType>
-									<TextEdit>false</TextEdit>
-									<EditTextUpdate>Always</EditTextUpdate>
-									<ContextMenu name="РезультатВПакетеКонтекстноеМеню" id="243"/>
-									<ExtendedTooltip name="РезультатВПакетеРасширеннаяПодсказка" id="244"/>
-									<Events>
-										<Event name="OnChange">РезультатВПакетеПриИзменении</Event>
-									</Events>
-								</InputField>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа управление результатом запроса</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУправлениеРезультатомЗапросаРасширеннаяПодсказка" id="427"/>
+									<ChildItems>
+										<CommandBar name="ГруппаКоманднаяПанельПакетаРезультатаЗапроса" id="424">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командная панель пакета результата запроса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командная панель пакета результата запроса</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>3</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ExtendedTooltip name="ГруппаКоманднаяПанельПакетаРезультатаЗапросаРасширеннаяПодсказка" id="425"/>
+											<ChildItems>
+												<Button name="ОтобразитьСкрытьПакетРезультатаЗапроса" id="398">
+													<Type>CommandBarButton</Type>
+													<Check>true</Check>
+													<CommandName>Form.Command.ОтобразитьСкрытьПакетРезультатаЗапроса</CommandName>
+													<ExtendedTooltip name="ОтобразитьСкрытьПакетРезультатаЗапросаРасширеннаяПодсказка" id="399"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<InputField name="РезультатВПакете" id="242">
+											<DataPath>РезультатВПакете</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>18</MaxWidth>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<EditTextUpdate>Always</EditTextUpdate>
+											<ContextMenu name="РезультатВПакетеКонтекстноеМеню" id="243"/>
+											<ExtendedTooltip name="РезультатВПакетеРасширеннаяПодсказка" id="244"/>
+											<Events>
+												<Event name="OnChange">РезультатВПакетеПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="КоманднаяПанельВидРезультата" id="396">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель вид результата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель вид результата</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:NavigationColor</BackColor>
+									<ExtendedTooltip name="КоманднаяПанельВидРезультатаРасширеннаяПодсказка" id="397"/>
+									<ChildItems>
+										<InputField name="ВидРезультата" id="290">
+											<DataPath>ВидРезультата</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>5</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>7</MaxWidth>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>таблица</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">таблица</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>дерево</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">дерево</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВидРезультатаКонтекстноеМеню" id="291"/>
+											<ExtendedTooltip name="ВидРезультатаРасширеннаяПодсказка" id="292"/>
+										</InputField>
+										<CheckBoxField name="ОпцияОграничениеВыводимыхСтрокВкл" id="266">
+											<DataPath>ОграничениеВыводимыхСтрокВкл</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОпцияОграничениеВыводимыхСтрокВклКонтекстноеМеню" id="267"/>
+											<ExtendedTooltip name="ОпцияОграничениеВыводимыхСтрокВклРасширеннаяПодсказка" id="268"/>
+											<Events>
+												<Event name="OnChange">ОпцияОграничениеВыводимыхСтрокВклПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ОпцияОграничениеВыводимыхСтрок" id="245">
+											<DataPath>ОграничениеВыводимыхСтрок</DataPath>
+											<Enabled>false</Enabled>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ограничение строк</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>4</MaxWidth>
+											<ContextMenu name="ОпцияОграничениеВыводимыхСтрокКонтекстноеМеню" id="246"/>
+											<ExtendedTooltip name="ОпцияОграничениеВыводимыхСтрокРасширеннаяПодсказка" id="247"/>
+											<Events>
+												<Event name="OnChange">ОпцияОграничениеВыводимыхСтрокПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="ОбновитьРезультат" id="293">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.ОбновитьРезультат</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ОбновитьРезультатРасширеннаяПодсказка" id="294"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 								<LabelField name="ИмяЗапросаРезультата" id="269">
 									<DataPath>ИмяЗапросаРезультата</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -1435,131 +1500,237 @@
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
-				<Table name="РезультатЗапросаДерево" id="277">
-					<Representation>Tree</Representation>
-					<ChangeRowSet>false</ChangeRowSet>
-					<ChangeRowOrder>false</ChangeRowOrder>
-					<AutoInsertNewRow>true</AutoInsertNewRow>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<FileDragMode>AsFile</FileDragMode>
-					<DataPath>РезультатЗапросаДерево</DataPath>
-					<CommandSet>
-						<ExcludedCommand>Add</ExcludedCommand>
-						<ExcludedCommand>Change</ExcludedCommand>
-						<ExcludedCommand>Copy</ExcludedCommand>
-						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
-						<ExcludedCommand>Delete</ExcludedCommand>
-						<ExcludedCommand>EndEdit</ExcludedCommand>
-						<ExcludedCommand>List</ExcludedCommand>
-						<ExcludedCommand>MoveDown</ExcludedCommand>
-						<ExcludedCommand>MoveUp</ExcludedCommand>
-						<ExcludedCommand>OutputList</ExcludedCommand>
-						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
-						<ExcludedCommand>SortListAsc</ExcludedCommand>
-						<ExcludedCommand>SortListDesc</ExcludedCommand>
-					</CommandSet>
-					<TreeSpecialSearch>false</TreeSpecialSearch>
-					<ContextMenu name="РезультатЗапросаДеревоКонтекстноеМеню" id="278"/>
-					<AutoCommandBar name="РезультатЗапросаДеревоКоманднаяПанель" id="279">
-						<Autofill>false</Autofill>
-					</AutoCommandBar>
-					<ExtendedTooltip name="РезультатЗапросаДеревоРасширеннаяПодсказка" id="280"/>
-					<SearchStringAddition name="РезультатЗапросаДеревоСтрокаПоиска" id="281">
-						<AdditionSource>
-							<Item>РезультатЗапросаДерево</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="РезультатЗапросаДеревоСтрокаПоискаКонтекстноеМеню" id="282"/>
-						<ExtendedTooltip name="РезультатЗапросаДеревоСтрокаПоискаРасширеннаяПодсказка" id="283"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="РезультатЗапросаДеревоСостояниеПросмотра" id="284">
-						<AdditionSource>
-							<Item>РезультатЗапросаДерево</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="РезультатЗапросаДеревоСостояниеПросмотраКонтекстноеМеню" id="285"/>
-						<ExtendedTooltip name="РезультатЗапросаДеревоСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="РезультатЗапросаДеревоУправлениеПоиском" id="287">
-						<AdditionSource>
-							<Item>РезультатЗапросаДерево</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="РезультатЗапросаДеревоУправлениеПоискомКонтекстноеМеню" id="288"/>
-						<ExtendedTooltip name="РезультатЗапросаДеревоУправлениеПоискомРасширеннаяПодсказка" id="289"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="Selection">РезультатЗапросаВыбор</Event>
-					</Events>
-				</Table>
-				<Table name="РезультатЗапроса" id="4">
-					<Representation>List</Representation>
-					<ChangeRowSet>false</ChangeRowSet>
-					<ChangeRowOrder>false</ChangeRowOrder>
-					<AutoInsertNewRow>true</AutoInsertNewRow>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<FileDragMode>AsFile</FileDragMode>
-					<DataPath>РезультатЗапроса</DataPath>
-					<CommandSet>
-						<ExcludedCommand>Add</ExcludedCommand>
-						<ExcludedCommand>Change</ExcludedCommand>
-						<ExcludedCommand>Copy</ExcludedCommand>
-						<ExcludedCommand>Delete</ExcludedCommand>
-						<ExcludedCommand>EndEdit</ExcludedCommand>
-						<ExcludedCommand>MoveDown</ExcludedCommand>
-						<ExcludedCommand>MoveUp</ExcludedCommand>
-						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
-						<ExcludedCommand>SortListAsc</ExcludedCommand>
-						<ExcludedCommand>SortListDesc</ExcludedCommand>
-					</CommandSet>
-					<RowFilter xsi:nil="true"/>
-					<ContextMenu name="РезультатЗапросаКонтекстноеМеню" id="5"/>
-					<AutoCommandBar name="РезультатЗапросаКоманднаяПанель" id="6">
-						<Autofill>false</Autofill>
-						<ChildItems>
-							<SearchStringAddition name="ОтображениеСтрокиПоиска" id="335">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Отображение строки поиска</v8:content>
-									</v8:item>
-								</Title>
-								<ContextMenu name="ОтображениеСтрокиПоискаКонтекстноеМеню" id="336"/>
-								<ExtendedTooltip name="ОтображениеСтрокиПоискаРасширеннаяПодсказка" id="337"/>
+				<UsualGroup name="ГруппаРезультат" id="422">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="423"/>
+					<ChildItems>
+						<Table name="ПакетРезультатаЗапроса" id="400">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Width>8</Width>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<DataPath>ПакетРезультатаЗапроса</DataPath>
+							<RowPictureDataPath>ПакетРезультатаЗапроса.ТипРезультата</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Abs>RowsPicture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПакетРезультатаЗапросаКонтекстноеМеню" id="401"/>
+							<AutoCommandBar name="ПакетРезультатаЗапросаКоманднаяПанель" id="402">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПакетРезультатаЗапросаРасширеннаяПодсказка" id="403"/>
+							<SearchStringAddition name="ПакетРезультатаЗапросаСтрокаПоиска" id="404">
+								<AdditionSource>
+									<Item>ПакетРезультатаЗапроса</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПакетРезультатаЗапросаСтрокаПоискаКонтекстноеМеню" id="405"/>
+								<ExtendedTooltip name="ПакетРезультатаЗапросаСтрокаПоискаРасширеннаяПодсказка" id="406"/>
 							</SearchStringAddition>
-						</ChildItems>
-					</AutoCommandBar>
-					<ExtendedTooltip name="РезультатЗапросаРасширеннаяПодсказка" id="7"/>
-					<SearchStringAddition name="РезультатЗапросаСтрокаПоиска" id="8">
-						<AdditionSource>
-							<Item>РезультатЗапроса</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="РезультатЗапросаСтрокаПоискаКонтекстноеМеню" id="9"/>
-						<ExtendedTooltip name="РезультатЗапросаСтрокаПоискаРасширеннаяПодсказка" id="10"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="РезультатЗапросаСостояниеПросмотра" id="11">
-						<AdditionSource>
-							<Item>РезультатЗапроса</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="РезультатЗапросаСостояниеПросмотраКонтекстноеМеню" id="12"/>
-						<ExtendedTooltip name="РезультатЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="РезультатЗапросаУправлениеПоиском" id="14">
-						<AdditionSource>
-							<Item>РезультатЗапроса</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="РезультатЗапросаУправлениеПоискомКонтекстноеМеню" id="15"/>
-						<ExtendedTooltip name="РезультатЗапросаУправлениеПоискомРасширеннаяПодсказка" id="16"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="Selection">РезультатЗапросаВыбор</Event>
-					</Events>
-				</Table>
+							<ViewStatusAddition name="ПакетРезультатаЗапросаСостояниеПросмотра" id="407">
+								<AdditionSource>
+									<Item>ПакетРезультатаЗапроса</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПакетРезультатаЗапросаСостояниеПросмотраКонтекстноеМеню" id="408"/>
+								<ExtendedTooltip name="ПакетРезультатаЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="409"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПакетРезультатаЗапросаУправлениеПоиском" id="410">
+								<AdditionSource>
+									<Item>ПакетРезультатаЗапроса</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПакетРезультатаЗапросаУправлениеПоискомКонтекстноеМеню" id="411"/>
+								<ExtendedTooltip name="ПакетРезультатаЗапросаУправлениеПоискомРасширеннаяПодсказка" id="412"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ПакетРезультатаЗапросаПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПакетРезультатаЗапросаИмя" id="413">
+									<DataPath>ПакетРезультатаЗапроса.Имя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПакетРезультатаЗапросаИмяКонтекстноеМеню" id="414"/>
+									<ExtendedTooltip name="ПакетРезультатаЗапросаИмяРасширеннаяПодсказка" id="415"/>
+								</InputField>
+								<InputField name="ПакетРезультатаЗапросаИнфо" id="416">
+									<DataPath>ПакетРезультатаЗапроса.Инфо</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.History</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ПакетРезультатаЗапросаИнфоКонтекстноеМеню" id="417"/>
+									<ExtendedTooltip name="ПакетРезультатаЗапросаИнфоРасширеннаяПодсказка" id="418"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаТаблица" id="430">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТаблицаРасширеннаяПодсказка" id="431"/>
+							<ChildItems>
+								<Table name="РезультатЗапроса" id="4">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>РезультатЗапроса</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="РезультатЗапросаКонтекстноеМеню" id="5"/>
+									<AutoCommandBar name="РезультатЗапросаКоманднаяПанель" id="6">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<SearchStringAddition name="ОтображениеСтрокиПоиска" id="335">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отображение строки поиска</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="ОтображениеСтрокиПоискаКонтекстноеМеню" id="336"/>
+												<ExtendedTooltip name="ОтображениеСтрокиПоискаРасширеннаяПодсказка" id="337"/>
+											</SearchStringAddition>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="РезультатЗапросаРасширеннаяПодсказка" id="7"/>
+									<SearchStringAddition name="РезультатЗапросаСтрокаПоиска" id="8">
+										<AdditionSource>
+											<Item>РезультатЗапроса</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РезультатЗапросаСтрокаПоискаКонтекстноеМеню" id="9"/>
+										<ExtendedTooltip name="РезультатЗапросаСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="РезультатЗапросаСостояниеПросмотра" id="11">
+										<AdditionSource>
+											<Item>РезультатЗапроса</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РезультатЗапросаСостояниеПросмотраКонтекстноеМеню" id="12"/>
+										<ExtendedTooltip name="РезультатЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="РезультатЗапросаУправлениеПоиском" id="14">
+										<AdditionSource>
+											<Item>РезультатЗапроса</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="РезультатЗапросаУправлениеПоискомКонтекстноеМеню" id="15"/>
+										<ExtendedTooltip name="РезультатЗапросаУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">РезультатЗапросаВыбор</Event>
+									</Events>
+								</Table>
+								<Table name="РезультатЗапросаДерево" id="277">
+									<Representation>Tree</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>РезультатЗапросаДерево</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<TreeSpecialSearch>false</TreeSpecialSearch>
+									<ContextMenu name="РезультатЗапросаДеревоКонтекстноеМеню" id="278"/>
+									<AutoCommandBar name="РезультатЗапросаДеревоКоманднаяПанель" id="279">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="РезультатЗапросаДеревоРасширеннаяПодсказка" id="280"/>
+									<SearchStringAddition name="РезультатЗапросаДеревоСтрокаПоиска" id="281">
+										<AdditionSource>
+											<Item>РезультатЗапросаДерево</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РезультатЗапросаДеревоСтрокаПоискаКонтекстноеМеню" id="282"/>
+										<ExtendedTooltip name="РезультатЗапросаДеревоСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="РезультатЗапросаДеревоСостояниеПросмотра" id="284">
+										<AdditionSource>
+											<Item>РезультатЗапросаДерево</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РезультатЗапросаДеревоСостояниеПросмотраКонтекстноеМеню" id="285"/>
+										<ExtendedTooltip name="РезультатЗапросаДеревоСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="РезультатЗапросаДеревоУправлениеПоиском" id="287">
+										<AdditionSource>
+											<Item>РезультатЗапросаДерево</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="РезультатЗапросаДеревоУправлениеПоискомКонтекстноеМеню" id="288"/>
+										<ExtendedTooltip name="РезультатЗапросаДеревоУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">РезультатЗапросаВыбор</Event>
+									</Events>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаКартинки" id="348">
@@ -2024,7 +2195,7 @@
 			</Title>
 			<Type/>
 		</Attribute>
-		<Attribute name="ОпцияОграничениеВыводимыхСтрок" id="10">
+		<Attribute name="ОграничениеВыводимыхСтрок" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2039,7 +2210,6 @@
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
-			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="ОпцияСохранятьКомментарии" id="13">
 			<Title>
@@ -2052,21 +2222,6 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="КоличествоВозвращенныхСтрокРезультата" id="17">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Количество реально возвращенных строк результата, а не выведенных в таблицу</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
 		</Attribute>
 		<Attribute name="ОпцияИнтервалАвтосохранения" id="18">
 			<Title>
@@ -2094,7 +2249,7 @@
 			</Title>
 			<Type/>
 		</Attribute>
-		<Attribute name="ОпцияОграничениеВыводимыхСтрокПервые" id="20">
+		<Attribute name="ОграничениеВыводимыхСтрокПервые" id="20">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2109,7 +2264,6 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
-			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="СтароеЗначениеИмяПараметра" id="21">
 			<Title>
@@ -2186,29 +2340,27 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ОпцияОграничениеВыводимыхСтрокПервыеВкл" id="25">
+		<Attribute name="ОграничениеВыводимыхСтрокПервыеВкл" id="25">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Опция ограничение выводимых строк первые вкл</v8:content>
+					<v8:content>Ограничение выводимых строк первые вкл</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ОпцияОграничениеВыводимыхСтрокВкл" id="26">
+		<Attribute name="ОграничениеВыводимыхСтрокВкл" id="26">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Опция ограничение выводимых строк вкл</v8:content>
+					<v8:content>Ограничение выводимых строк вкл</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="ИмяЗапросаРезультата" id="27">
 			<Title>
@@ -2257,7 +2409,7 @@
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ОпцияВидРезультата" id="32">
+		<Attribute name="ВидРезультата" id="32">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2271,7 +2423,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="КаталогДанныхПользователя" id="33">
 			<Title>
@@ -2483,6 +2634,81 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПакетРезультатаЗапроса" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пакет результата запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Инфо" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инфо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипРезультата" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип результата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РезультатНаФорме" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат на форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -3130,20 +3356,26 @@
 			</Picture>
 			<Action>Команда_УдалитьПерехваченныеЗапросы</Action>
 		</Command>
-		<Command name="ПанельВременныхТаблиц" id="32">
+		<Command name="ОтобразитьСкрытьПакетРезультатаЗапроса" id="32">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ВТ</v8:content>
+					<v8:content>Пакет запросов</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Панель временных таблиц</v8:content>
+					<v8:content>Все результаты запроса</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>Команда_ПанельВременныхТаблиц</Action>
+			<Shortcut>Ctrl+P</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardTempTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Команда_ОтобразитьСкрытьПакетРезультатаЗапроса</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>

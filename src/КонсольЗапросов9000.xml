@@ -326,23 +326,17 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="934708c5-5d76-41f4-9213-9ac32c12942b">
+			<Attribute uuid="0b5fd0a3-108f-4233-bf31-9c8d2d03d59c">
 				<Properties>
-					<Name>АдресСохраняемыеСостояния</Name>
+					<Name>СохраняемыеСостояния</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Адрес сохраняемые состояния</v8:content>
+							<v8:content>Сохраняемые состояния</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
+					<Comment>Сохраняемые состояния - структура, предназначена для сохранения значений, которых нет в опциях (состояния флажков форм, разных значений, и т.д.).Записывается в файл. Из файла читается только при первом открытии.</Comment>
+					<Type/>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
 					<EditFormat/>
