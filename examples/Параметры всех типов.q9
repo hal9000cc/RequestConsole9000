@@ -14,7 +14,7 @@
 	<Property name="СохраняемыеСостояния">
 		<Value xsi:type="Structure">
 			<Property name="УстановитьЗначенияПараметров">
-				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="ВидимостьПакетаРезультатаЗапроса">
 				<Value xsi:type="xs:boolean">true</Value>
@@ -33,6 +33,9 @@
 			</Property>
 			<Property name="ОграничениеВыводимыхСтрокПервыеВкл">
 				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ПараметрыЗапросаРядомСТекстом">
+				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 		</Value>
 	</Property>
@@ -458,13 +461,13 @@
 									</Value>
 								</Property>
 								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Expense</Value>
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
 								</Property>
 								<Property name="ТипКонтейнера">
 									<Value xsi:type="xs:decimal">0</Value>
 								</Property>
 								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Expense</Value>
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
 								</Property>
 							</value>
 							<id xsi:type="xs:decimal">8</id>
@@ -1676,7 +1679,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">6 / 0:00:00.012</Value>
+					<Value xsi:type="xs:string">6 / 0:00:00.055</Value>
 				</Property>
 			</Value>
 			<Value xsi:type="Structure">

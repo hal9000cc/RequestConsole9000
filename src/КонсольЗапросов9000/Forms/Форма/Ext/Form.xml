@@ -488,153 +488,413 @@
 											<v8:content>Страница запрос</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
 									<ExtendedTooltip name="СтраницаЗапросРасширеннаяПодсказка" id="50"/>
 									<ChildItems>
-										<CommandBar name="ГруппаКоманднаяПанельЗапроса" id="111">
+										<UsualGroup name="ГруппаРедактированиеЗапроса" id="432">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа командная панель запроса</v8:content>
+													<v8:content>Группа редактирование запроса</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа командная панель запроса</v8:content>
+													<v8:content>Группа редактирование запроса</v8:content>
 												</v8:item>
 											</ToolTip>
-											<ExtendedTooltip name="ГруппаКоманднаяПанельЗапросаРасширеннаяПодсказка" id="112"/>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРедактированиеЗапросаРасширеннаяПодсказка" id="433"/>
 											<ChildItems>
-												<Button name="КонструкторЗапросов" id="102">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.КонструкторЗапросов</CommandName>
-													<RepresentationInContextMenu>OnlyInContextMenu</RepresentationInContextMenu>
-													<ExtendedTooltip name="КонструкторЗапросовРасширеннаяПодсказка" id="103"/>
-												</Button>
-												<Button name="СинтаксическийКонтрольЗапроса" id="210">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.СинтаксическийКонтрольЗапроса</CommandName>
-													<ExtendedTooltip name="СинтаксическийКонтрольЗапросаРасширеннаяПодсказка" id="211"/>
-												</Button>
-												<Button name="ФорматироватьТекстЗапроса" id="212">
-													<Type>CommandBarButton</Type>
-													<Representation>Picture</Representation>
-													<CommandName>Form.Command.ФорматироватьТекстЗапроса</CommandName>
-													<Picture>
-														<xr:Abs>Picture.zip</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<ExtendedTooltip name="ФорматироватьТекстЗапросаРасширеннаяПодсказка" id="213"/>
-												</Button>
-												<Button name="ДобавитьПереносСтрокВТекстЗапроса" id="178">
-													<Type>CommandBarButton</Type>
-													<Representation>Picture</Representation>
-													<CommandName>Form.Command.ДобавитьПереносСтрокВТекст</CommandName>
-													<Picture>
-														<xr:Abs>Picture.png</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-													<ExtendedTooltip name="ДобавитьПереносСтрокВТекстЗапросаРасширеннаяПодсказка" id="179"/>
-												</Button>
-												<Button name="УбратьПереносСтрокИзТекстаЗапроса" id="176">
-													<Type>CommandBarButton</Type>
-													<Representation>Picture</Representation>
-													<CommandName>Form.Command.УбратьПереносСтрокИзТекста</CommandName>
-													<Picture>
-														<xr:Abs>Picture.png</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-													<ExtendedTooltip name="УбратьПереносСтрокИзТекстаЗапросаРасширеннаяПодсказка" id="177"/>
-												</Button>
-												<Button name="ДобавитьКомментированиеСтрокВТекстЗапроса" id="206">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ДобавитьКомментированиеСтрокВТекст</CommandName>
-													<Picture>
-														<xr:Abs>Picture.png</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<ExtendedTooltip name="ДобавитьКомментированиеСтрокВТекстЗапросаРасширеннаяПодсказка" id="207"/>
-												</Button>
-												<Button name="УбратьКомментированиеСтрокИзТекстаЗапроса" id="208">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.УбратьКомментированиеСтрокИзТекста</CommandName>
-													<Picture>
-														<xr:Abs>Picture.png</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<ExtendedTooltip name="УбратьКомментированиеСтрокИзТекстаЗапросаРасширеннаяПодсказка" id="209"/>
-												</Button>
-												<Button name="КомандаЗаполнитьИзXML" id="109">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ЗаполнитьИзXML</CommandName>
-													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-													<ExtendedTooltip name="КомандаЗаполнитьИзXMLРасширеннаяПодсказка" id="110"/>
-												</Button>
-												<Button name="ПолучитьКодДляЗахватаВОтладчике" id="222">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ПолучитьКодДляПерехватаВОтладчике</CommandName>
-													<Picture>
-														<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
-														<xr:LoadTransparent>true</xr:LoadTransparent>
-													</Picture>
-													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-													<ExtendedTooltip name="ПолучитьКодДляЗахватаВОтладчикеРасширеннаяПодсказка" id="223"/>
-												</Button>
-												<Button name="ПолучитьПерехваченныеЗапросы" id="224">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ПолучитьПерехваченныеЗапросы</CommandName>
-													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-													<ExtendedTooltip name="ПолучитьПерехваченныеЗапросыРасширеннаяПодсказка" id="225"/>
-												</Button>
-												<Button name="ВставитьПредопределенноеЗначение" id="365">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ВставитьПредопределенноеЗначение</CommandName>
-													<Picture>
-														<xr:Abs>Picture.png</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<ExtendedTooltip name="ВставитьПредопределенноеЗначениеРасширеннаяПодсказка" id="366"/>
-												</Button>
-												<Button name="ПолучитьКодСПараметрами" id="394">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ПолучитьКодСПараметрами</CommandName>
-													<ExtendedTooltip name="ПолучитьКодСПараметрамиРасширеннаяПодсказка" id="395"/>
-												</Button>
+												<UsualGroup name="ГруппаКоманднаяПанельСтраницыЗапрос" id="481">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа командная панель страницы запрос</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа командная панель страницы запрос</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКоманднаяПанельСтраницыЗапросРасширеннаяПодсказка" id="482"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаКоманднаяПанельЗапроса" id="479">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа командная панель запроса</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа командная панель запроса</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаКоманднаяПанельЗапросаРасширеннаяПодсказка" id="480"/>
+															<ChildItems>
+																<Button name="КонструкторЗапросов" id="102">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.КонструкторЗапросов</CommandName>
+																	<RepresentationInContextMenu>OnlyInContextMenu</RepresentationInContextMenu>
+																	<ExtendedTooltip name="КонструкторЗапросовРасширеннаяПодсказка" id="103"/>
+																</Button>
+																<Button name="СинтаксическийКонтрольЗапроса" id="210">
+																	<Type>UsualButton</Type>
+																	<Representation>Picture</Representation>
+																	<CommandName>Form.Command.СинтаксическийКонтрольЗапроса</CommandName>
+																	<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="СинтаксическийКонтрольЗапросаРасширеннаяПодсказка" id="211"/>
+																</Button>
+																<Button name="ФорматироватьТекстЗапроса" id="212">
+																	<Type>UsualButton</Type>
+																	<Representation>Picture</Representation>
+																	<CommandName>Form.Command.ФорматироватьТекстЗапроса</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.zip</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="ФорматироватьТекстЗапросаРасширеннаяПодсказка" id="213"/>
+																</Button>
+																<Button name="ДобавитьПереносСтрокВТекстЗапроса" id="178">
+																	<Type>UsualButton</Type>
+																	<Representation>Picture</Representation>
+																	<CommandName>Form.Command.ДобавитьПереносСтрокВТекст</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="ДобавитьПереносСтрокВТекстЗапросаРасширеннаяПодсказка" id="179"/>
+																</Button>
+																<Button name="УбратьПереносСтрокИзТекстаЗапроса" id="176">
+																	<Type>UsualButton</Type>
+																	<Representation>Picture</Representation>
+																	<CommandName>Form.Command.УбратьПереносСтрокИзТекста</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="УбратьПереносСтрокИзТекстаЗапросаРасширеннаяПодсказка" id="177"/>
+																</Button>
+																<Button name="ДобавитьКомментированиеСтрокВТекстЗапроса" id="206">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ДобавитьКомментированиеСтрокВТекст</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="ДобавитьКомментированиеСтрокВТекстЗапросаРасширеннаяПодсказка" id="207"/>
+																</Button>
+																<Button name="УбратьКомментированиеСтрокИзТекстаЗапроса" id="208">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.УбратьКомментированиеСтрокИзТекста</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="УбратьКомментированиеСтрокИзТекстаЗапросаРасширеннаяПодсказка" id="209"/>
+																</Button>
+																<Button name="ВставитьПредопределенноеЗначение" id="365">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ВставитьПредопределенноеЗначение</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="ВставитьПредопределенноеЗначениеРасширеннаяПодсказка" id="366"/>
+																</Button>
+																<Button name="ПолучитьКодСПараметрами" id="394">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ПолучитьКодСПараметрами</CommandName>
+																	<ExtendedTooltip name="ПолучитьКодСПараметрамиРасширеннаяПодсказка" id="395"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<CommandBar name="ГруппаКоманднаяПанельЗапросаПравая" id="111">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа командная панель запроса правая</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа командная панель запроса правая</v8:content>
+																</v8:item>
+															</ToolTip>
+															<HorizontalLocation>Right</HorizontalLocation>
+															<ExtendedTooltip name="ГруппаКоманднаяПанельЗапросаПраваяРасширеннаяПодсказка" id="112"/>
+															<ChildItems>
+																<Button name="ПараметрыЗапросаРядомСТекстом" id="477">
+																	<Type>CommandBarButton</Type>
+																	<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																	<Check>true</Check>
+																	<CommandName>Form.Command.ПараметрыЗапросаРядомСТекстом</CommandName>
+																	<PictureLocation>Right</PictureLocation>
+																	<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="ПараметрыЗапросаРядомСТекстомРасширеннаяПодсказка" id="478"/>
+																</Button>
+																<Button name="КомандаЗаполнитьИзXML" id="109">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.ЗаполнитьИзXML</CommandName>
+																	<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="КомандаЗаполнитьИзXMLРасширеннаяПодсказка" id="110"/>
+																</Button>
+																<Button name="ПолучитьПерехваченныеЗапросы" id="224">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.ПолучитьПерехваченныеЗапросы</CommandName>
+																	<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="ПолучитьПерехваченныеЗапросыРасширеннаяПодсказка" id="225"/>
+																</Button>
+																<Button name="ПолучитьКодДляЗахватаВОтладчике" id="222">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.ПолучитьКодДляПерехватаВОтладчике</CommandName>
+																	<Picture>
+																		<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="ПолучитьКодДляЗахватаВОтладчикеРасширеннаяПодсказка" id="223"/>
+																</Button>
+															</ChildItems>
+														</CommandBar>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаТекстЗапроса" id="475">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа текст запроса</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа текст запроса</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаТекстЗапросаРасширеннаяПодсказка" id="476"/>
+													<ChildItems>
+														<TextDocumentField name="ТекстЗапроса" id="1">
+															<DataPath>ТекстЗапроса</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="2">
+																<ChildItems>
+																	<Button name="ТекстЗапросаКонтекстноеМенюКонструкторЗапросов" id="216">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.КонструкторЗапросов</CommandName>
+																		<ExtendedTooltip name="ТекстЗапросаКонтекстноеМенюКонструкторЗапросовРасширеннаяПодсказка" id="217"/>
+																	</Button>
+																	<Button name="ТекстЗапросаКонтекстноеМенюСинтаксическийКонтрольЗапроса" id="218">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.СинтаксическийКонтрольЗапроса</CommandName>
+																		<ExtendedTooltip name="ТекстЗапросаКонтекстноеМенюСинтаксическийКонтрольЗапросаРасширеннаяПодсказка" id="219"/>
+																	</Button>
+																	<Button name="ТекстЗапросаКонтекстноеМенюФорматироватьТекстЗапроса" id="220">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ФорматироватьТекстЗапроса</CommandName>
+																		<Picture>
+																			<xr:Abs>Picture.zip</xr:Abs>
+																			<xr:LoadTransparent>false</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="ТекстЗапросаКонтекстноеМенюФорматироватьТекстЗапросаРасширеннаяПодсказка" id="221"/>
+																	</Button>
+																</ChildItems>
+															</ContextMenu>
+															<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="3"/>
+															<Events>
+																<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
+															</Events>
+														</TextDocumentField>
+														<UsualGroup name="ГруппаПараметры" id="434">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметры запроса</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница параметры</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Width>30</Width>
+															<Group>Vertical</Group>
+															<ChildrenAlign>None</ChildrenAlign>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="435"/>
+															<ChildItems>
+																<Table name="ПараметрыЗапроса" id="53">
+																	<Representation>List</Representation>
+																	<EnableStartDrag>true</EnableStartDrag>
+																	<EnableDrag>true</EnableDrag>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<DataPath>ПараметрыЗапроса</DataPath>
+																	<CommandSet>
+																		<ExcludedCommand>CancelSearch</ExcludedCommand>
+																		<ExcludedCommand>EndEdit</ExcludedCommand>
+																		<ExcludedCommand>Find</ExcludedCommand>
+																		<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+																		<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+																	</CommandSet>
+																	<RowFilter xsi:nil="true"/>
+																	<ContextMenu name="ПараметрыЗапросаКонтекстноеМеню" id="54"/>
+																	<AutoCommandBar name="ПараметрыЗапросаКоманднаяПанель" id="55">
+																		<ChildItems>
+																			<Button name="ПараметрыЗапросаКнопкаДобавить" id="132">
+																				<Type>CommandBarButton</Type>
+																				<Representation>Picture</Representation>
+																				<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.Add</CommandName>
+																				<ExtendedTooltip name="ПараметрыЗапросаКнопкаДобавитьРасширеннаяПодсказка" id="133"/>
+																			</Button>
+																			<Button name="ПараметрыЗапросаКнопкаСкопировать" id="134">
+																				<Type>CommandBarButton</Type>
+																				<Representation>Picture</Representation>
+																				<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.Copy</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ПараметрыЗапросаКнопкаСкопироватьРасширеннаяПодсказка" id="135"/>
+																			</Button>
+																			<Button name="ПараметрыЗапросаКнопкаУдалить" id="136">
+																				<Type>CommandBarButton</Type>
+																				<Representation>Picture</Representation>
+																				<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.Delete</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ПараметрыЗапросаКнопкаУдалитьРасширеннаяПодсказка" id="137"/>
+																			</Button>
+																			<Button name="ПараметрыЗапросаКнопкаПереместитьВверх" id="138">
+																				<Type>CommandBarButton</Type>
+																				<Representation>Picture</Representation>
+																				<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.MoveUp</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ПараметрыЗапросаКнопкаПереместитьВверхРасширеннаяПодсказка" id="139"/>
+																			</Button>
+																			<Button name="ПараметрыЗапросаКнопкаПереместитьВниз" id="140">
+																				<Type>CommandBarButton</Type>
+																				<Representation>Picture</Representation>
+																				<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.MoveDown</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ПараметрыЗапросаКнопкаПереместитьВнизРасширеннаяПодсказка" id="141"/>
+																			</Button>
+																			<Button name="ПараметрыЗаполнитьИзЗапроса" id="107">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПараметрыЗаполнитьИзЗапроса</CommandName>
+																				<ExtendedTooltip name="ПараметрыЗаполнитьИзЗапросаРасширеннаяПодсказка" id="108"/>
+																			</Button>
+																			<Button name="ПараметрыЗапросаПараметрыОчистить" id="142">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПараметрыОчистить</CommandName>
+																				<ExtendedTooltip name="ПараметрыЗапросаПараметрыОчиститьРасширеннаяПодсказка" id="143"/>
+																			</Button>
+																		</ChildItems>
+																	</AutoCommandBar>
+																	<ExtendedTooltip name="ПараметрыЗапросаРасширеннаяПодсказка" id="56"/>
+																	<SearchStringAddition name="ПараметрыЗапросаСтрокаПоиска" id="57">
+																		<AdditionSource>
+																			<Item>ПараметрыЗапроса</Item>
+																			<Type>SearchStringRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПараметрыЗапросаСтрокаПоискаКонтекстноеМеню" id="58"/>
+																		<ExtendedTooltip name="ПараметрыЗапросаСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+																	</SearchStringAddition>
+																	<ViewStatusAddition name="ПараметрыЗапросаСостояниеПросмотра" id="60">
+																		<AdditionSource>
+																			<Item>ПараметрыЗапроса</Item>
+																			<Type>ViewStatusRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПараметрыЗапросаСостояниеПросмотраКонтекстноеМеню" id="61"/>
+																		<ExtendedTooltip name="ПараметрыЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+																	</ViewStatusAddition>
+																	<SearchControlAddition name="ПараметрыЗапросаУправлениеПоиском" id="63">
+																		<AdditionSource>
+																			<Item>ПараметрыЗапроса</Item>
+																			<Type>SearchControl</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПараметрыЗапросаУправлениеПоискомКонтекстноеМеню" id="64"/>
+																		<ExtendedTooltip name="ПараметрыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+																	</SearchControlAddition>
+																	<Events>
+																		<Event name="BeforeEditEnd">ПараметрыЗапросаПередОкончаниемРедактирования</Event>
+																		<Event name="OnActivateRow">ПараметрыЗапросаПриАктивизацииСтроки</Event>
+																		<Event name="OnStartEdit">ПараметрыЗапросаПриНачалеРедактирования</Event>
+																		<Event name="OnChange">ПараметрыЗапросаПриИзменении</Event>
+																	</Events>
+																	<ChildItems>
+																		<InputField name="ПараметрыЗапросаИмя" id="66">
+																			<DataPath>ПараметрыЗапроса.Имя</DataPath>
+																			<EditMode>Directly</EditMode>
+																			<ContextMenu name="ПараметрыЗапросаИмяКонтекстноеМеню" id="67"/>
+																			<ExtendedTooltip name="ПараметрыЗапросаИмяРасширеннаяПодсказка" id="68"/>
+																		</InputField>
+																		<InputField name="ПараметрыЗапросаТипПараметра" id="104">
+																			<DataPath>ПараметрыЗапроса.ТипЗначения</DataPath>
+																			<EditMode>Directly</EditMode>
+																			<ChoiceButton>true</ChoiceButton>
+																			<ChooseType>false</ChooseType>
+																			<TypeDomainEnabled>false</TypeDomainEnabled>
+																			<ContextMenu name="ПараметрыЗапросаТипПараметраКонтекстноеМеню" id="105"/>
+																			<ExtendedTooltip name="ПараметрыЗапросаТипПараметраРасширеннаяПодсказка" id="106"/>
+																			<Events>
+																				<Event name="StartChoice">ПараметрыЗапросаТипПараметраНачалоВыбора</Event>
+																			</Events>
+																		</InputField>
+																		<PictureField name="ПараметрыЗапросаФорма" id="125">
+																			<DataPath>ПараметрыЗапроса.ТипКонтейнера</DataPath>
+																			<EditMode>Directly</EditMode>
+																			<ShowInHeader>false</ShowInHeader>
+																			<Width>1</Width>
+																			<ValuesPicture>
+																				<xr:Abs>ValuesPicture.png</xr:Abs>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</ValuesPicture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="ПараметрыЗапросаФормаКонтекстноеМеню" id="126"/>
+																			<ExtendedTooltip name="ПараметрыЗапросаФормаРасширеннаяПодсказка" id="127"/>
+																			<Events>
+																				<Event name="OnChange">ПараметрыЗапросаФормаПриИзменении</Event>
+																			</Events>
+																		</PictureField>
+																		<InputField name="ПараметрыЗапросаЗначение" id="69">
+																			<DataPath>ПараметрыЗапроса.Значение</DataPath>
+																			<EditMode>Directly</EditMode>
+																			<ClearButton>true</ClearButton>
+																			<ContextMenu name="ПараметрыЗапросаЗначениеКонтекстноеМеню" id="70"/>
+																			<ExtendedTooltip name="ПараметрыЗапросаЗначениеРасширеннаяПодсказка" id="71"/>
+																			<Events>
+																				<Event name="OnChange">ПараметрыЗапросаЗначениеПриИзменении</Event>
+																				<Event name="StartChoice">ПараметрыЗапросаЗначениеНачалоВыбора</Event>
+																				<Event name="Clearing">ПараметрыЗапросаЗначениеОчистка</Event>
+																				<Event name="TextEditEnd">ПараметрыЗапросаЗначениеОкончаниеВводаТекста</Event>
+																				<Event name="ChoiceProcessing">ПараметрыЗапросаЗначениеОбработкаВыбора</Event>
+																			</Events>
+																		</InputField>
+																	</ChildItems>
+																</Table>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
-										</CommandBar>
-										<TextDocumentField name="ТекстЗапроса" id="1">
-											<DataPath>ТекстЗапроса</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="2">
-												<ChildItems>
-													<Button name="ТекстЗапросаКонтекстноеМенюКонструкторЗапросов" id="216">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.КонструкторЗапросов</CommandName>
-														<ExtendedTooltip name="ТекстЗапросаКонтекстноеМенюКонструкторЗапросовРасширеннаяПодсказка" id="217"/>
-													</Button>
-													<Button name="ТекстЗапросаКонтекстноеМенюСинтаксическийКонтрольЗапроса" id="218">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.СинтаксическийКонтрольЗапроса</CommandName>
-														<ExtendedTooltip name="ТекстЗапросаКонтекстноеМенюСинтаксическийКонтрольЗапросаРасширеннаяПодсказка" id="219"/>
-													</Button>
-													<Button name="ТекстЗапросаКонтекстноеМенюФорматироватьТекстЗапроса" id="220">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.ФорматироватьТекстЗапроса</CommandName>
-														<Picture>
-															<xr:Abs>Picture.zip</xr:Abs>
-															<xr:LoadTransparent>false</xr:LoadTransparent>
-														</Picture>
-														<ExtendedTooltip name="ТекстЗапросаКонтекстноеМенюФорматироватьТекстЗапросаРасширеннаяПодсказка" id="221"/>
-													</Button>
-												</ChildItems>
-											</ContextMenu>
-											<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="3"/>
-											<Events>
-												<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
-											</Events>
-										</TextDocumentField>
+										</UsualGroup>
 									</ChildItems>
 								</Page>
 								<Page name="СтраницаПараметры" id="51">
@@ -651,153 +911,6 @@
 										</v8:item>
 									</ToolTip>
 									<ExtendedTooltip name="СтраницаПараметрыРасширеннаяПодсказка" id="52"/>
-									<ChildItems>
-										<Table name="ПараметрыЗапроса" id="53">
-											<Representation>List</Representation>
-											<EnableStartDrag>true</EnableStartDrag>
-											<EnableDrag>true</EnableDrag>
-											<FileDragMode>AsFile</FileDragMode>
-											<DataPath>ПараметрыЗапроса</DataPath>
-											<CommandSet>
-												<ExcludedCommand>CancelSearch</ExcludedCommand>
-												<ExcludedCommand>EndEdit</ExcludedCommand>
-												<ExcludedCommand>Find</ExcludedCommand>
-												<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
-												<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
-											</CommandSet>
-											<RowFilter xsi:nil="true"/>
-											<ContextMenu name="ПараметрыЗапросаКонтекстноеМеню" id="54"/>
-											<AutoCommandBar name="ПараметрыЗапросаКоманднаяПанель" id="55">
-												<ChildItems>
-													<Button name="ПараметрыЗапросаКнопкаДобавить" id="132">
-														<Type>CommandBarButton</Type>
-														<Representation>Picture</Representation>
-														<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.Add</CommandName>
-														<ExtendedTooltip name="ПараметрыЗапросаКнопкаДобавитьРасширеннаяПодсказка" id="133"/>
-													</Button>
-													<Button name="ПараметрыЗапросаКнопкаСкопировать" id="134">
-														<Type>CommandBarButton</Type>
-														<Representation>Picture</Representation>
-														<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.Copy</CommandName>
-														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-														<ExtendedTooltip name="ПараметрыЗапросаКнопкаСкопироватьРасширеннаяПодсказка" id="135"/>
-													</Button>
-													<Button name="ПараметрыЗапросаКнопкаУдалить" id="136">
-														<Type>CommandBarButton</Type>
-														<Representation>Picture</Representation>
-														<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.Delete</CommandName>
-														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-														<ExtendedTooltip name="ПараметрыЗапросаКнопкаУдалитьРасширеннаяПодсказка" id="137"/>
-													</Button>
-													<Button name="ПараметрыЗапросаКнопкаПереместитьВверх" id="138">
-														<Type>CommandBarButton</Type>
-														<Representation>Picture</Representation>
-														<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.MoveUp</CommandName>
-														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-														<ExtendedTooltip name="ПараметрыЗапросаКнопкаПереместитьВверхРасширеннаяПодсказка" id="139"/>
-													</Button>
-													<Button name="ПараметрыЗапросаКнопкаПереместитьВниз" id="140">
-														<Type>CommandBarButton</Type>
-														<Representation>Picture</Representation>
-														<CommandName>Form.Item.ПараметрыЗапроса.StandardCommand.MoveDown</CommandName>
-														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-														<ExtendedTooltip name="ПараметрыЗапросаКнопкаПереместитьВнизРасширеннаяПодсказка" id="141"/>
-													</Button>
-													<Button name="ПараметрыЗаполнитьИзЗапроса" id="107">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.ПараметрыЗаполнитьИзЗапроса</CommandName>
-														<ExtendedTooltip name="ПараметрыЗаполнитьИзЗапросаРасширеннаяПодсказка" id="108"/>
-													</Button>
-													<Button name="ПараметрыЗапросаПараметрыОчистить" id="142">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.ПараметрыОчистить</CommandName>
-														<ExtendedTooltip name="ПараметрыЗапросаПараметрыОчиститьРасширеннаяПодсказка" id="143"/>
-													</Button>
-												</ChildItems>
-											</AutoCommandBar>
-											<ExtendedTooltip name="ПараметрыЗапросаРасширеннаяПодсказка" id="56"/>
-											<SearchStringAddition name="ПараметрыЗапросаСтрокаПоиска" id="57">
-												<AdditionSource>
-													<Item>ПараметрыЗапроса</Item>
-													<Type>SearchStringRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="ПараметрыЗапросаСтрокаПоискаКонтекстноеМеню" id="58"/>
-												<ExtendedTooltip name="ПараметрыЗапросаСтрокаПоискаРасширеннаяПодсказка" id="59"/>
-											</SearchStringAddition>
-											<ViewStatusAddition name="ПараметрыЗапросаСостояниеПросмотра" id="60">
-												<AdditionSource>
-													<Item>ПараметрыЗапроса</Item>
-													<Type>ViewStatusRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="ПараметрыЗапросаСостояниеПросмотраКонтекстноеМеню" id="61"/>
-												<ExtendedTooltip name="ПараметрыЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
-											</ViewStatusAddition>
-											<SearchControlAddition name="ПараметрыЗапросаУправлениеПоиском" id="63">
-												<AdditionSource>
-													<Item>ПараметрыЗапроса</Item>
-													<Type>SearchControl</Type>
-												</AdditionSource>
-												<ContextMenu name="ПараметрыЗапросаУправлениеПоискомКонтекстноеМеню" id="64"/>
-												<ExtendedTooltip name="ПараметрыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="65"/>
-											</SearchControlAddition>
-											<Events>
-												<Event name="BeforeEditEnd">ПараметрыЗапросаПередОкончаниемРедактирования</Event>
-												<Event name="OnActivateRow">ПараметрыЗапросаПриАктивизацииСтроки</Event>
-												<Event name="OnStartEdit">ПараметрыЗапросаПриНачалеРедактирования</Event>
-												<Event name="OnChange">ПараметрыЗапросаПриИзменении</Event>
-											</Events>
-											<ChildItems>
-												<InputField name="ПараметрыЗапросаИмя" id="66">
-													<DataPath>ПараметрыЗапроса.Имя</DataPath>
-													<EditMode>Directly</EditMode>
-													<ContextMenu name="ПараметрыЗапросаИмяКонтекстноеМеню" id="67"/>
-													<ExtendedTooltip name="ПараметрыЗапросаИмяРасширеннаяПодсказка" id="68"/>
-												</InputField>
-												<InputField name="ПараметрыЗапросаТипПараметра" id="104">
-													<DataPath>ПараметрыЗапроса.ТипЗначения</DataPath>
-													<EditMode>Directly</EditMode>
-													<ChoiceButton>true</ChoiceButton>
-													<ChooseType>false</ChooseType>
-													<TypeDomainEnabled>false</TypeDomainEnabled>
-													<ContextMenu name="ПараметрыЗапросаТипПараметраКонтекстноеМеню" id="105"/>
-													<ExtendedTooltip name="ПараметрыЗапросаТипПараметраРасширеннаяПодсказка" id="106"/>
-													<Events>
-														<Event name="StartChoice">ПараметрыЗапросаТипПараметраНачалоВыбора</Event>
-													</Events>
-												</InputField>
-												<PictureField name="ПараметрыЗапросаФорма" id="125">
-													<DataPath>ПараметрыЗапроса.ТипКонтейнера</DataPath>
-													<EditMode>Directly</EditMode>
-													<ShowInHeader>false</ShowInHeader>
-													<Width>1</Width>
-													<ValuesPicture>
-														<xr:Abs>ValuesPicture.png</xr:Abs>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</ValuesPicture>
-													<FileDragMode>AsFile</FileDragMode>
-													<ContextMenu name="ПараметрыЗапросаФормаКонтекстноеМеню" id="126"/>
-													<ExtendedTooltip name="ПараметрыЗапросаФормаРасширеннаяПодсказка" id="127"/>
-													<Events>
-														<Event name="OnChange">ПараметрыЗапросаФормаПриИзменении</Event>
-													</Events>
-												</PictureField>
-												<InputField name="ПараметрыЗапросаЗначение" id="69">
-													<DataPath>ПараметрыЗапроса.Значение</DataPath>
-													<EditMode>Directly</EditMode>
-													<ClearButton>true</ClearButton>
-													<ContextMenu name="ПараметрыЗапросаЗначениеКонтекстноеМеню" id="70"/>
-													<ExtendedTooltip name="ПараметрыЗапросаЗначениеРасширеннаяПодсказка" id="71"/>
-													<Events>
-														<Event name="OnChange">ПараметрыЗапросаЗначениеПриИзменении</Event>
-														<Event name="StartChoice">ПараметрыЗапросаЗначениеНачалоВыбора</Event>
-														<Event name="Clearing">ПараметрыЗапросаЗначениеОчистка</Event>
-														<Event name="TextEditEnd">ПараметрыЗапросаЗначениеОкончаниеВводаТекста</Event>
-														<Event name="ChoiceProcessing">ПараметрыЗапросаЗначениеОбработкаВыбора</Event>
-													</Events>
-												</InputField>
-											</ChildItems>
-										</Table>
-									</ChildItems>
 								</Page>
 								<Page name="СтраницаВременныеТаблицы" id="144">
 									<Title>
@@ -1257,6 +1370,7 @@
 											<v8:content>Командная панель вид результата</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
 									<ShowTitle>false</ShowTitle>
 									<BackColor>style:NavigationColor</BackColor>
 									<ExtendedTooltip name="КоманднаяПанельВидРезультатаРасширеннаяПодсказка" id="397"/>
@@ -3326,7 +3440,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить код выполнения запроса на встроенном языке с параметрами</v8:content>
+					<v8:content>Получить код выполнения запроса на встроенном языке 1С (с параметрами)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+F9</Shortcut>
@@ -3376,6 +3490,26 @@
 			</Picture>
 			<Action>Команда_ОтобразитьСкрытьПакетРезультатаЗапроса</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПараметрыЗапросаРядомСТекстом" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры запроса рядом с текстом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Команда_ПараметрыЗапросаРядомСТекстом</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
