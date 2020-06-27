@@ -1227,12 +1227,94 @@
 												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
-										<TextDocumentField name="ТекстАлгоритм" id="358">
-											<DataPath>ТекстАлгоритм</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<ContextMenu name="ТекстАлгоритмКонтекстноеМеню" id="359"/>
-											<ExtendedTooltip name="ТекстАлгоритмРасширеннаяПодсказка" id="360"/>
-										</TextDocumentField>
+										<UsualGroup name="ГруппаТекстаАлгоритма" id="499">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текста алгоритма</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текста алгоритма</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаТекстаАлгоритмаРасширеннаяПодсказка" id="500"/>
+											<ChildItems>
+												<TextDocumentField name="ТекстАлгоритм" id="358">
+													<DataPath>ТекстАлгоритм</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ТекстАлгоритмКонтекстноеМеню" id="359"/>
+													<ExtendedTooltip name="ТекстАлгоритмРасширеннаяПодсказка" id="360"/>
+													<Events>
+														<Event name="OnChange">ТекстАлгоритмПриИзменении</Event>
+													</Events>
+												</TextDocumentField>
+												<Table name="СтруктураЗаписиРезультата" id="483">
+													<Representation>Tree</Representation>
+													<ReadOnly>true</ReadOnly>
+													<ChangeRowSet>false</ChangeRowSet>
+													<ChangeRowOrder>false</ChangeRowOrder>
+													<Width>14</Width>
+													<Header>false</Header>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>СтруктураЗаписиРезультата</DataPath>
+													<RowPictureDataPath>СтруктураЗаписиРезультата.Картинка</RowPictureDataPath>
+													<TreeSpecialSearch>false</TreeSpecialSearch>
+													<ContextMenu name="СтруктураЗаписиРезультатаКонтекстноеМеню" id="484"/>
+													<AutoCommandBar name="СтруктураЗаписиРезультатаКоманднаяПанель" id="485">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="СтруктураЗаписиРезультатаРасширеннаяПодсказка" id="486"/>
+													<SearchStringAddition name="СтруктураЗаписиРезультатаСтрокаПоиска" id="487">
+														<AdditionSource>
+															<Item>СтруктураЗаписиРезультата</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СтруктураЗаписиРезультатаСтрокаПоискаКонтекстноеМеню" id="488"/>
+														<ExtendedTooltip name="СтруктураЗаписиРезультатаСтрокаПоискаРасширеннаяПодсказка" id="489"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="СтруктураЗаписиРезультатаСостояниеПросмотра" id="490">
+														<AdditionSource>
+															<Item>СтруктураЗаписиРезультата</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СтруктураЗаписиРезультатаСостояниеПросмотраКонтекстноеМеню" id="491"/>
+														<ExtendedTooltip name="СтруктураЗаписиРезультатаСостояниеПросмотраРасширеннаяПодсказка" id="492"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="СтруктураЗаписиРезультатаУправлениеПоиском" id="493">
+														<AdditionSource>
+															<Item>СтруктураЗаписиРезультата</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="СтруктураЗаписиРезультатаУправлениеПоискомКонтекстноеМеню" id="494"/>
+														<ExtendedTooltip name="СтруктураЗаписиРезультатаУправлениеПоискомРасширеннаяПодсказка" id="495"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="DragCheck">СтруктураЗаписиРезультатаПроверкаПеретаскивания</Event>
+														<Event name="Selection">СтруктураЗаписиРезультатаВыбор</Event>
+														<Event name="DragStart">СтруктураЗаписиРезультатаНачалоПеретаскивания</Event>
+														<Event name="BeforeExpand">СтруктураЗаписиРезультатаПередРазворачиванием</Event>
+														<Event name="Drag">СтруктураЗаписиРезультатаПеретаскивание</Event>
+														<Event name="DragEnd">СтруктураЗаписиРезультатаОкончаниеПеретаскивания</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="СтруктураЗаписиРезультатаИмя" id="496">
+															<DataPath>СтруктураЗаписиРезультата.Имя</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="СтруктураЗаписиРезультатаИмяКонтекстноеМеню" id="497"/>
+															<ExtendedTooltip name="СтруктураЗаписиРезультатаИмяРасширеннаяПодсказка" id="498"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</Page>
 							</ChildItems>
@@ -2824,6 +2906,65 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="СтруктураЗаписиРезультата" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура записи результата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ПодчиненныеУзлыРаскрыты" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подчиненные узлы раскрыты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
