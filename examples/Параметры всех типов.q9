@@ -3,36 +3,49 @@
 		<Value xsi:type="xs:string">КонсольЗапросов9000</Value>
 	</Property>
 	<Property name="Версия">
-		<Value xsi:type="xs:decimal">10</Value>
+		<Value xsi:type="xs:decimal">11</Value>
 	</Property>
 	<Property name="КоличествоЗапросов">
-		<Value xsi:type="xs:decimal">25</Value>
+		<Value xsi:type="xs:decimal">26</Value>
 	</Property>
 	<Property name="ИмяФайла">
 		<Value xsi:type="xs:string">C:\Users\kuza\Desktop\RequestConsole9000_git\examples\Параметры всех типов.q9</Value>
 	</Property>
-	<Property name="Опции">
+	<Property name="СохраняемыеСостояния">
 		<Value xsi:type="Structure">
-			<Property name="ОпцияОграничениеВыводимыхСтрокПервые">
-				<Value xsi:type="xs:decimal">1000</Value>
-			</Property>
-			<Property name="ОпцияОграничениеВыводимыхСтрокПервыеВкл">
-				<Value xsi:type="xs:boolean">false</Value>
-			</Property>
-			<Property name="ОпцияОграничениеВыводимыхСтрок">
-				<Value xsi:type="xs:decimal">1000</Value>
-			</Property>
-			<Property name="ОпцияОграничениеВыводимыхСтрокВкл">
+			<Property name="УстановитьЗначенияПараметров">
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
+			<Property name="ВидимостьПакетаРезультатаЗапроса">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ВидРезультата">
+				<Value xsi:type="xs:string">таблица</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрок">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокВкл">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервые">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервыеВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ПараметрыЗапросаРядомСТекстом">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Опции">
+		<Value xsi:type="Structure">
 			<Property name="ОпцияСохранятьКомментарии">
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="ОпцияАвтосохранениеПередВыполнениемЗапроса">
 				<Value xsi:type="xs:boolean">true</Value>
-			</Property>
-			<Property name="ОпцияВидРезультата">
-				<Value xsi:type="xs:string">таблица</Value>
 			</Property>
 			<Property name="ОпцияОбрабатывать__">
 				<Value xsi:type="xs:boolean">true</Value>
@@ -52,7 +65,7 @@
 					<Value xsi:type="xs:string">Запрос1</Value>
 				</Property>
 				<Property name="ТекстЗапроса">
-					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 5
+					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 51
 	Номенклатура.Ссылка КАК Ссылка,
 	Номенклатура.Наименование КАК Наименование,
 	Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения
@@ -100,7 +113,8 @@
 		|ИЗ
 		|	Справочник.Номенклатура КАК Номенклатура
 		|;
-		|
+		|                                Выборка.ЕдиницаИзмерения.Ссылка.ПометкаУдаления
+		Выборка.ЕдиницаИзмерения.Ссылка.ИмяПредопределенныхДанных; Выборка.ЕдиницаИзмерения.Ссылка.Предопределенный
 		|////////////////////////////////////////////////////////////////////////////////
 		|ВЫБРАТЬ
 		|	СтатьиКалькуляции.Ссылка КАК Ссылка,
@@ -223,6 +237,57 @@
 						<item>
 							<value xsi:type="Structure">
 								<Property name="Имя">
+									<Value xsi:type="xs:string">массив</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">ффф; ыыы; ввв</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">2</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Массив</Value>
+										</Property>
+										<Property name="СписокЗначений">
+											<Value xsi:type="ValueListType">
+												<valueType/>
+												<lastId xsi:type="xs:decimal">2</lastId>
+												<item>
+													<value xsi:type="xs:string">ффф</value>
+													<id xsi:type="xs:decimal">0</id>
+												</item>
+												<item>
+													<value xsi:type="xs:string">ыыы</value>
+													<id xsi:type="xs:decimal">1</id>
+												</item>
+												<item>
+													<value xsi:type="xs:string">ввв</value>
+													<id xsi:type="xs:decimal">2</id>
+												</item>
+											</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">ффф; ыыы; ввв</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
 									<Value xsi:type="xs:string">строка</Value>
 								</Property>
 								<Property name="ТипЗначения">
@@ -244,7 +309,7 @@
 									<Value xsi:type="xs:string">тестовый параметр</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">0</id>
+							<id xsi:type="xs:decimal">1</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -271,7 +336,7 @@
 									<Value xsi:type="xs:decimal">555</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">1</id>
+							<id xsi:type="xs:decimal">2</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -293,7 +358,7 @@
 									<Value xsi:type="xs:boolean">false</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">2</id>
+							<id xsi:type="xs:decimal">3</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -318,7 +383,7 @@
 									<Value xsi:type="xs:dateTime">2020-01-02T00:00:00</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">3</id>
+							<id xsi:type="xs:decimal">4</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -343,7 +408,7 @@
 									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">4</id>
+							<id xsi:type="xs:decimal">5</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -378,7 +443,7 @@
 									</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">5</id>
+							<id xsi:type="xs:decimal">6</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -413,7 +478,7 @@
 									</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">6</id>
+							<id xsi:type="xs:decimal">7</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -435,7 +500,7 @@
 									<Value xsi:type="Null"/>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">7</id>
+							<id xsi:type="xs:decimal">8</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -448,16 +513,16 @@
 									</Value>
 								</Property>
 								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Expense</Value>
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
 								</Property>
 								<Property name="ТипКонтейнера">
 									<Value xsi:type="xs:decimal">0</Value>
 								</Property>
 								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Expense</Value>
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">8</id>
+							<id xsi:type="xs:decimal">9</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -479,7 +544,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">9</id>
+							<id xsi:type="xs:decimal">10</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -501,7 +566,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">10</id>
+							<id xsi:type="xs:decimal">11</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -523,7 +588,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">11</id>
+							<id xsi:type="xs:decimal">12</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -555,7 +620,7 @@
 									</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">12</id>
+							<id xsi:type="xs:decimal">13</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -587,7 +652,7 @@
 									</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">13</id>
+							<id xsi:type="xs:decimal">14</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -609,7 +674,7 @@
 									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ae</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">14</id>
+							<id xsi:type="xs:decimal">15</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1266,7 +1331,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">f178c63e-c549-11e7-8e50-0050568b35ac</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">15</id>
+							<id xsi:type="xs:decimal">16</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1288,7 +1353,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">16</id>
+							<id xsi:type="xs:decimal">17</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1310,7 +1375,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:DocumentRef.РеализацияТоваровУслуг">40a3f530-15e0-11e7-80c8-708bcd551c7e</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">17</id>
+							<id xsi:type="xs:decimal">18</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1332,7 +1397,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:EnumRef.ВариантыОказанияУслуг">ОрганизациейПоАгентскойСхеме</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">18</id>
+							<id xsi:type="xs:decimal">19</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1354,7 +1419,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCharacteristicTypesRef.СтатьиДоходов">260937cc-c180-11e4-a7a9-000d884fd00d</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">19</id>
+							<id xsi:type="xs:decimal">20</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1376,7 +1441,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCalculationTypesRef.Начисления">2609369b-c180-11e4-a7a9-000d884fd00d</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">20</id>
+							<id xsi:type="xs:decimal">21</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1398,7 +1463,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:BusinessProcessRef.Задание">c089f56b-ae84-11ea-b0de-ccaca8a9d013</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">21</id>
+							<id xsi:type="xs:decimal">22</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1420,7 +1485,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:TaskRef.ЗадачаИсполнителя">3d6c551f-fade-11e4-92f1-0050568b35ac</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">22</id>
+							<id xsi:type="xs:decimal">23</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1442,7 +1507,7 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ExchangePlanRef.Полный">a5275e0e-d307-481e-9ec4-1c58826db850</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">23</id>
+							<id xsi:type="xs:decimal">24</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1497,57 +1562,6 @@
 										</Property>
 										<Property name="Представление">
 											<Value xsi:type="xs:string">11; 22; 33</Value>
-										</Property>
-									</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">24</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">массив</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>xs:string</Type>
-										<StringQualifiers>
-											<Length>0</Length>
-											<AllowedLength>Variable</AllowedLength>
-										</StringQualifiers>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:string">ффф; ыыы; ввв</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">2</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="Structure">
-										<Property name="Тип">
-											<Value xsi:type="xs:string">Массив</Value>
-										</Property>
-										<Property name="СписокЗначений">
-											<Value xsi:type="ValueListType">
-												<valueType/>
-												<lastId xsi:type="xs:decimal">2</lastId>
-												<item>
-													<value xsi:type="xs:string">ффф</value>
-													<id xsi:type="xs:decimal">0</id>
-												</item>
-												<item>
-													<value xsi:type="xs:string">ыыы</value>
-													<id xsi:type="xs:decimal">1</id>
-												</item>
-												<item>
-													<value xsi:type="xs:string">ввв</value>
-													<id xsi:type="xs:decimal">2</id>
-												</item>
-											</Value>
-										</Property>
-										<Property name="Представление">
-											<Value xsi:type="xs:string">ффф; ыыы; ввв</Value>
 										</Property>
 									</Value>
 								</Property>
@@ -1666,7 +1680,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">6 / 0:00:00.010</Value>
+					<Value xsi:type="xs:string">6 / 0:00:00.009</Value>
 				</Property>
 			</Value>
 			<Value xsi:type="Structure">
@@ -1674,7 +1688,235 @@
 					<Value xsi:type="xs:string">Запрос24</Value>
 				</Property>
 				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 100
+	ПриобретениеТоваровУслуг.Ссылка КАК Ссылка,
+	ПриобретениеТоваровУслуг.ВерсияДанных КАК ВерсияДанных,
+	ПриобретениеТоваровУслуг.ПометкаУдаления КАК ПометкаУдаления,
+	ПриобретениеТоваровУслуг.Номер КАК Номер,
+	ПриобретениеТоваровУслуг.Дата КАК Дата,
+	ПриобретениеТоваровУслуг.Проведен КАК Проведен,
+	ПриобретениеТоваровУслуг.Валюта КАК Валюта,
+	ПриобретениеТоваровУслуг.Партнер КАК Партнер,
+	ПриобретениеТоваровУслуг.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	ПриобретениеТоваровУслуг.Подразделение КАК Подразделение,
+	ПриобретениеТоваровУслуг.Склад КАК Склад,
+	ПриобретениеТоваровУслуг.Контрагент КАК Контрагент,
+	ПриобретениеТоваровУслуг.СуммаДокумента КАК СуммаДокумента,
+	ПриобретениеТоваровУслуг.СуммаВзаиморасчетовПоЗаказу КАК СуммаВзаиморасчетовПоЗаказу,
+	ПриобретениеТоваровУслуг.Менеджер КАК Менеджер,
+	ПриобретениеТоваровУслуг.ЗаказПоставщику КАК ЗаказПоставщику,
+	ПриобретениеТоваровУслуг.ПодотчетноеЛицо КАК ПодотчетноеЛицо,
+	ПриобретениеТоваровУслуг.ЦенаВключаетНДС КАК ЦенаВключаетНДС,
+	ПриобретениеТоваровУслуг.ВалютаВзаиморасчетов КАК ВалютаВзаиморасчетов,
+	ПриобретениеТоваровУслуг.Комментарий КАК Комментарий,
+	ПриобретениеТоваровУслуг.ДатаПлатежа КАК ДатаПлатежа,
+	ПриобретениеТоваровУслуг.ЗакупкаПодДеятельность КАК ЗакупкаПодДеятельность,
+	ПриобретениеТоваровУслуг.ФормаОплаты КАК ФормаОплаты,
+	ПриобретениеТоваровУслуг.Согласован КАК Согласован,
+	ПриобретениеТоваровУслуг.НалогообложениеНДС КАК НалогообложениеНДС,
+	ПриобретениеТоваровУслуг.СуммаВзаиморасчетов КАК СуммаВзаиморасчетов,
+	ПриобретениеТоваровУслуг.БанковскийСчетОрганизации КАК БанковскийСчетОрганизации,
+	ПриобретениеТоваровУслуг.НомерВходящегоДокумента КАК НомерВходящегоДокумента,
+	ПриобретениеТоваровУслуг.ДатаВходящегоДокумента КАК ДатаВходящегоДокумента,
+	ПриобретениеТоваровУслуг.Грузоотправитель КАК Грузоотправитель,
+	ПриобретениеТоваровУслуг.БанковскийСчетКонтрагента КАК БанковскийСчетКонтрагента,
+	ПриобретениеТоваровУслуг.БанковскийСчетГрузоотправителя КАК БанковскийСчетГрузоотправителя,
+	ПриобретениеТоваровУслуг.Сделка КАК Сделка,
+	ПриобретениеТоваровУслуг.Принял КАК Принял,
+	ПриобретениеТоваровУслуг.ПринялДолжность КАК ПринялДолжность,
+	ПриобретениеТоваровУслуг.ПоступлениеПоЗаказам КАК ПоступлениеПоЗаказам,
+	ПриобретениеТоваровУслуг.ГруппаФинансовогоУчета КАК ГруппаФинансовогоУчета,
+	ПриобретениеТоваровУслуг.РегистрироватьЦеныПоставщика КАК РегистрироватьЦеныПоставщика,
+	ПриобретениеТоваровУслуг.Договор КАК Договор,
+	ПриобретениеТоваровУслуг.Автор КАК Автор,
+	ПриобретениеТоваровУслуг.Руководитель КАК Руководитель,
+	ПриобретениеТоваровУслуг.ПорядокРасчетов КАК ПорядокРасчетов,
+	ПриобретениеТоваровУслуг.ВернутьМногооборотнуюТару КАК ВернутьМногооборотнуюТару,
+	ПриобретениеТоваровУслуг.ДатаВозвратаМногооборотнойТары КАК ДатаВозвратаМногооборотнойТары,
+	ПриобретениеТоваровУслуг.СостояниеЗаполненияМногооборотнойТары КАК СостояниеЗаполненияМногооборотнойТары,
+	ПриобретениеТоваровУслуг.ТребуетсяЗалогЗаТару КАК ТребуетсяЗалогЗаТару,
+	ПриобретениеТоваровУслуг.ДопоступлениеПоДокументу КАК ДопоступлениеПоДокументу,
+	ПриобретениеТоваровУслуг.НазначениеАванса КАК НазначениеАванса,
+	ПриобретениеТоваровУслуг.КоличествоДокументов КАК КоличествоДокументов,
+	ПриобретениеТоваровУслуг.КоличествоЛистов КАК КоличествоЛистов,
+	ПриобретениеТоваровУслуг.ГлавныйБухгалтер КАК ГлавныйБухгалтер,
+	ПриобретениеТоваровУслуг.СтатьяДвиженияДенежныхСредств КАК СтатьяДвиженияДенежныхСредств,
+	ПриобретениеТоваровУслуг.СпособДоставки КАК СпособДоставки,
+	ПриобретениеТоваровУслуг.ПеревозчикПартнер КАК ПеревозчикПартнер,
+	ПриобретениеТоваровУслуг.ЗонаДоставки КАК ЗонаДоставки,
+	ПриобретениеТоваровУслуг.ВремяДоставкиС КАК ВремяДоставкиС,
+	ПриобретениеТоваровУслуг.ВремяДоставкиПо КАК ВремяДоставкиПо,
+	ПриобретениеТоваровУслуг.АдресДоставки КАК АдресДоставки,
+	ПриобретениеТоваровУслуг.АдресДоставкиЗначенияПолей КАК АдресДоставкиЗначенияПолей,
+	ПриобретениеТоваровУслуг.ДополнительнаяИнформацияПоДоставке КАК ДополнительнаяИнформацияПоДоставке,
+	ПриобретениеТоваровУслуг.АдресДоставкиПеревозчика КАК АдресДоставкиПеревозчика,
+	ПриобретениеТоваровУслуг.АдресДоставкиПеревозчикаЗначенияПолей КАК АдресДоставкиПеревозчикаЗначенияПолей,
+	ПриобретениеТоваровУслуг.ОсобыеУсловияПеревозки КАК ОсобыеУсловияПеревозки,
+	ПриобретениеТоваровУслуг.ОсобыеУсловияПеревозкиОписание КАК ОсобыеУсловияПеревозкиОписание,
+	ПриобретениеТоваровУслуг.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	ПриобретениеТоваровУслуг.УдалитьТоварноТранспортнаяНакладнаяЕГАИС КАК УдалитьТоварноТранспортнаяНакладнаяЕГАИС,
+	ПриобретениеТоваровУслуг.ЕстьАлкогольнаяПродукция КАК ЕстьАлкогольнаяПродукция,
+	ПриобретениеТоваровУслуг.Соглашение КАК Соглашение,
+	ПриобретениеТоваровУслуг.Организация КАК Организация,
+	ПриобретениеТоваровУслуг.Курс КАК Курс,
+	ПриобретениеТоваровУслуг.Кратность КАК Кратность,
+	ПриобретениеТоваровУслуг.ПорядокОплаты КАК ПорядокОплаты,
+	ПриобретениеТоваровУслуг.ЕстьМаркируемаяПродукцияГИСМ КАК ЕстьМаркируемаяПродукцияГИСМ,
+	ПриобретениеТоваровУслуг.ЕстьКиЗГИСМ КАК ЕстьКиЗГИСМ,
+	ПриобретениеТоваровУслуг.ВариантПриемкиТоваров КАК ВариантПриемкиТоваров,
+	ПриобретениеТоваровУслуг.Товары.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Номенклатура КАК Номенклатура,
+		НоменклатураПоставщика КАК НоменклатураПоставщика,
+		Характеристика КАК Характеристика,
+		Упаковка КАК Упаковка,
+		КоличествоУпаковок КАК КоличествоУпаковок,
+		Количество КАК Количество,
+		Цена КАК Цена,
+		ВидЦеныПоставщика КАК ВидЦеныПоставщика,
+		ПроцентРучнойСкидки КАК ПроцентРучнойСкидки,
+		СуммаРучнойСкидки КАК СуммаРучнойСкидки,
+		Сумма КАК Сумма,
+		СтавкаНДС КАК СтавкаНДС,
+		СуммаНДС КАК СуммаНДС,
+		СуммаСНДС КАК СуммаСНДС,
+		СтатьяРасходов КАК СтатьяРасходов,
+		АналитикаРасходов КАК АналитикаРасходов,
+		КодСтроки КАК КодСтроки,
+		НомерГТД КАК НомерГТД,
+		Склад КАК Склад,
+		ЗаказПоставщику КАК ЗаказПоставщику,
+		УдалитьНомерСтрокиДокументаПоставщика КАК УдалитьНомерСтрокиДокументаПоставщика,
+		Сертификат КАК Сертификат,
+		НомерПаспорта КАК НомерПаспорта,
+		СтатусУказанияСерий КАК СтатусУказанияСерий,
+		УдалитьСтатусУказанияСерийНаСкладах КАК УдалитьСтатусУказанияСерийНаСкладах,
+		УдалитьСтатусУказанияСерийТоварыУПартнеров КАК УдалитьСтатусУказанияСерийТоварыУПартнеров,
+		Сделка КАК Сделка,
+		СуммаВзаиморасчетов КАК СуммаВзаиморасчетов,
+		СуммаНДСВзаиморасчетов КАК СуммаНДСВзаиморасчетов,
+		ВидЗапасов КАК ВидЗапасов,
+		ИдентификаторСтроки КАК ИдентификаторСтроки,
+		УдалитьАналитикаУчетаПартий КАК УдалитьАналитикаУчетаПартий,
+		Назначение КАК Назначение,
+		Серия КАК Серия,
+		АналитикаУчетаНоменклатуры КАК АналитикаУчетаНоменклатуры,
+		УдалитьАналитикаУчетаНоменклатурыТоварыУПартнеров КАК УдалитьАналитикаУчетаНоменклатурыТоварыУПартнеров,
+		Подразделение КАК Подразделение,
+		СписатьНаРасходы КАК СписатьНаРасходы
+	) КАК Товары,
+	ПриобретениеТоваровУслуг.ДополнительныеРеквизиты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Свойство КАК Свойство,
+		Значение КАК Значение,
+		ТекстоваяСтрока КАК ТекстоваяСтрока
+	) КАК ДополнительныеРеквизиты,
+	ПриобретениеТоваровУслуг.РасшифровкаПлатежа.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Заказ КАК Заказ,
+		Сумма КАК Сумма,
+		ВалютаВзаиморасчетов КАК ВалютаВзаиморасчетов,
+		СуммаВзаиморасчетов КАК СуммаВзаиморасчетов
+	) КАК РасшифровкаПлатежа,
+	ПриобретениеТоваровУслуг.Серии.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Серия КАК Серия,
+		Количество КАК Количество,
+		Номенклатура КАК Номенклатура,
+		Характеристика КАК Характеристика,
+		Назначение КАК Назначение,
+		Склад КАК Склад
+	) КАК Серии,
+	ПриобретениеТоваровУслуг.ВидыЗапасов.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ИдентификаторСтроки КАК ИдентификаторСтроки,
+		АналитикаУчетаНоменклатуры КАК АналитикаУчетаНоменклатуры,
+		УдалитьАналитикаУчетаНоменклатурыТоварыУПартнеров КАК УдалитьАналитикаУчетаНоменклатурыТоварыУПартнеров,
+		ВидЗапасов КАК ВидЗапасов,
+		НомерГТД КАК НомерГТД,
+		Количество КАК Количество,
+		ЗаказПоставщику КАК ЗаказПоставщику,
+		ВидЗапасовПолучателя КАК ВидЗапасовПолучателя,
+		Цена КАК Цена,
+		СтавкаНДС КАК СтавкаНДС,
+		СуммаНДС КАК СуммаНДС,
+		СуммаСНДС КАК СуммаСНДС,
+		СуммаВзаиморасчетов КАК СуммаВзаиморасчетов,
+		СуммаНДСВзаиморасчетов КАК СуммаНДСВзаиморасчетов,
+		СуммаРучнойСкидки КАК СуммаРучнойСкидки
+	) КАК ВидыЗапасов,
+	ПриобретениеТоваровУслуг.Представление КАК Представление,
+	ПриобретениеТоваровУслуг.МоментВремени КАК МоментВремени
+ИЗ
+	Документ.ПриобретениеТоваровУслуг КАК ПриобретениеТоваровУслуг
+</Value>
+				</Property>
+				<Property name="ТекстКод">
 					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">2</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">100 / 0:00:00.055</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запрос26</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 100
+	РасчетыСКлиентами.Период КАК Период,
+	РасчетыСКлиентами.Регистратор КАК Регистратор,
+	РасчетыСКлиентами.НомерСтроки КАК НомерСтроки,
+	РасчетыСКлиентами.Активность КАК Активность,
+	РасчетыСКлиентами.ВидДвижения КАК ВидДвижения,
+	РасчетыСКлиентами.АналитикаУчетаПоПартнерам КАК АналитикаУчетаПоПартнерам,
+	РасчетыСКлиентами.ЗаказКлиента КАК ЗаказКлиента,
+	РасчетыСКлиентами.Валюта КАК Валюта,
+	РасчетыСКлиентами.Сумма КАК Сумма,
+	РасчетыСКлиентами.КОплате КАК КОплате,
+	РасчетыСКлиентами.Оплачивается КАК Оплачивается,
+	РасчетыСКлиентами.КОтгрузке КАК КОтгрузке,
+	РасчетыСКлиентами.Отгружается КАК Отгружается,
+	РасчетыСКлиентами.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	РасчетыСКлиентами.ФормаОплаты КАК ФормаОплаты,
+	РасчетыСКлиентами.СчетНаОплату КАК СчетНаОплату,
+	РасчетыСКлиентами.ПродажаПоЗаказу КАК ПродажаПоЗаказу,
+	РасчетыСКлиентами.ДатаРегистратора КАК ДатаРегистратора,
+	РасчетыСКлиентами.ДатаПлатежа КАК ДатаПлатежа,
+	РасчетыСКлиентами.СуммаРегл КАК СуммаРегл,
+	РасчетыСКлиентами.СуммаУпр КАК СуммаУпр,
+	РасчетыСКлиентами.ИсключатьПриКонтроле КАК ИсключатьПриКонтроле,
+	РасчетыСКлиентами.ДопустимаяСуммаЗадолженности КАК ДопустимаяСуммаЗадолженности,
+	РасчетыСКлиентами.ЗалогЗаТару КАК ЗалогЗаТару,
+	РасчетыСКлиентами.СтатьяДвиженияДенежныхСредств КАК СтатьяДвиженияДенежныхСредств,
+	РасчетыСКлиентами.РасчетныйДокумент КАК РасчетныйДокумент,
+	РасчетыСКлиентами.МоментВремени КАК МоментВремени
+ИЗ
+	РегистрНакопления.РасчетыСКлиентами КАК РасчетыСКлиентами
+</Value>
 				</Property>
 				<Property name="ТекстКод">
 					<Value xsi:type="xs:string"/>
@@ -1698,7 +1940,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">0 / 0:00:00</Value>
+					<Value xsi:type="xs:string">100 / 0:00:00.011</Value>
 				</Property>
 			</Value>
 		</Value>
