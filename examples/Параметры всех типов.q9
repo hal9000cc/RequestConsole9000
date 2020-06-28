@@ -105,130 +105,11 @@
 </Value>
 				</Property>
 				<Property name="ТекстКод">
-					<Value xsi:type="xs:string">	Запрос1 = Новый Запрос("
-		|ВЫБРАТЬ ПЕРВЫЕ 5
-		|	Номенклатура.Ссылка КАК Ссылка,
-		|	Номенклатура.Наименование КАК Наименование,
-		|	Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения
-		|ИЗ
-		|	Справочник.Номенклатура КАК Номенклатура
-		|;
-		|                                Выборка.ЕдиницаИзмерения.Ссылка.ПометкаУдаления
-		Выборка.ЕдиницаИзмерения.Ссылка.ИмяПредопределенныхДанных; Выборка.ЕдиницаИзмерения.Ссылка.Предопределенный
-		|////////////////////////////////////////////////////////////////////////////////
-		|ВЫБРАТЬ
-		|	СтатьиКалькуляции.Ссылка КАК Ссылка,
-		|	СтатьиКалькуляции.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
-		|ИЗ
-		|	Справочник.СтатьиКалькуляции КАК СтатьиКалькуляции
-		|ГДЕ
-		|	СтатьиКалькуляции.Ссылка = &amp;справочник
-		|	И СтатьиКалькуляции.Предопределенный
-		|;
-		|
-		|////////////////////////////////////////////////////////////////////////////////
-		|ВЫБРАТЬ
-		|	таблица.Ссылка КАК Ссылка,
-		|	таблица.Наименование КАК Наименование,
-		|	таблица.ЕдиницаИзмерения КАК ЕдиницаИзмерения
-		|ПОМЕСТИТЬ таблица
-		|ИЗ
-		|	&amp;таблица КАК таблица
-		|;
-		|
-		|////////////////////////////////////////////////////////////////////////////////
-		|ВЫБРАТЬ
-		|	таблица.Ссылка КАК Ссылка,
-		|	таблица.Наименование КАК Наименование,
-		|	таблица.ЕдиницаИзмерения КАК ЕдиницаИзмерения
-		|ИЗ
-		|	таблица КАК таблица
-		|////////////////////////////////////////////////////////////////////////////////");
-
-	Запрос1.УстановитьПараметр("строка", "тестовый параметр");
-	Запрос1.УстановитьПараметр("число", 555);
-	Запрос1.УстановитьПараметр("булево", Ложь);
-	Запрос1.УстановитьПараметр("дата", '20200102');
-	Запрос1.УстановитьПараметр("датавремя", '20200302152359');
-	Запрос1.УстановитьПараметр("граница", Новый Граница('20200315', ВидГраницы.Исключая));
-	Запрос1.УстановитьПараметр("момент_времени", Новый МоментВремени('20170331235959', Документы.РеализацияТоваровУслуг.ПолучитьСсылку(Новый УникальныйИдентификатор("d94e29d2-d5b3-11e7-8e50-0050568b35ac")))); //Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59
-	Запрос1.УстановитьПараметр("null", Null);
-	Запрос1.УстановитьПараметр("вид_движения_накопления", ВидДвиженияНакопления.Расход);
-	Запрос1.УстановитьПараметр("вид_движения_бухгалтерии", ВидДвиженияБухгалтерии.Кредит);
-	Запрос1.УстановитьПараметр("план_счетов", ПланыСчетов.Хозрасчетный.ОсновныеСредства); //01
-	Запрос1.УстановитьПараметр("вид_счета", ВидСчета.Пассивный);
-	Запрос1.УстановитьПараметр("тип_число", Тип("Число"));
-	Запрос1.УстановитьПараметр("тип_ссылка", Тип("СправочникСсылка.Валюты"));
-	Запрос1.УстановитьПараметр("уникальный_идентификатор", Новый УникальныйИдентификатор("5e6e8412-fd5b-11e4-92f1-0050568b35ae"));
-	Запрос1.УстановитьПараметр("все_справочники", Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f178c63e-c549-11e7-8e50-0050568b35ac"))); //00-00000288 Инструкция огнетушителя ОП-10
-	Запрос1.УстановитьПараметр("справочник", Справочники.СтатьиКалькуляции.ПолуфабрикатыПроизводимыеВПроцессе); // Полуфабрикаты производимые в процессе
-	Запрос1.УстановитьПараметр("документ", Документы.РеализацияТоваровУслуг.ПолучитьСсылку(Новый УникальныйИдентификатор("40a3f530-15e0-11e7-80c8-708bcd551c7e"))); //Реализация товаров и услуг МС00-000002 от 31.03.2017 10:47:16
-	Запрос1.УстановитьПараметр("перечисление", Перечисления.ВариантыОказанияУслуг.ОрганизациейПоАгентскойСхеме);
-	Запрос1.УстановитьПараметр("план_видов_характеристик", ПланыВидовХарактеристик.СтатьиДоходов.РеализацияОС); //УТ-000004 Реализация ОС
-	Запрос1.УстановитьПараметр("план_видов_расчета", ПланыВидовРасчета.Начисления.ПолучитьСсылку(Новый УникальныйИдентификатор("2609369b-c180-11e4-a7a9-000d884fd00d"))); //СВХУР Оплата сверхурочных часов
-	Запрос1.УстановитьПараметр("бизнес_процесс", БизнесПроцессы.Задание.ПолучитьСсылку(Новый УникальныйИдентификатор("c089f56b-ae84-11ea-b0de-ccaca8a9d013"))); //задание от 15.06.2020 0:19:14 (Задание)
-	Запрос1.УстановитьПараметр("задача", Задачи.ЗадачаИсполнителя.ПолучитьСсылку(Новый УникальныйИдентификатор("3d6c551f-fade-11e4-92f1-0050568b35ac"))); //Подвести итоги согласования продажи от 15.05.2015 12:41:55
-	Запрос1.УстановитьПараметр("план_обмена", ПланыОбмена.Полный.ПолучитьСсылку(Новый УникальныйИдентификатор("a5275e0e-d307-481e-9ec4-1c58826db850")));
-
-	список_значений = Новый СписокЗначений;
-	список_значений.Добавить(11);
-	список_значений.Добавить(22);
-	список_значений.Добавить(33);
-	Запрос1.УстановитьПараметр("список_значений", список_значений);
-
-	массив = Новый Массив;
-	массив.Добавить("ффф");
-	массив.Добавить("ыыы");
-	массив.Добавить("ввв");
-	Запрос1.УстановитьПараметр("массив", массив);
-
-	таблица = Новый ТаблицаЗначений;
-	таблица.Колонки.Добавить("Ссылка", Новый ОписаниеТипов("СправочникСсылка.Номенклатура"));
-	ТипыКолонки = Новый Массив;
-	ТипыКолонки.Добавить(Тип("Строка"));
-	ТипыКолонки.Добавить(Тип("Число"));
-	таблица.Колонки.Добавить("Наименование", Новый ОписаниеТипов(ТипыКолонки, Новый КвалификаторыЧисла(15, 0, ДопустимыйЗнак.Любой), Новый КвалификаторыСтроки(100, ДопустимаяДлина.Переменная)));
-	ТипыКолонки = Новый Массив;
-	ТипыКолонки.Добавить(Тип("СправочникСсылка.УпаковкиЕдиницыИзмерения"));
-	ТипыКолонки.Добавить(Тип("Дата"));
-	ТипыКолонки.Добавить(Тип("Null"));
-	таблица.Колонки.Добавить("ЕдиницаИзмерения", Новый ОписаниеТипов(ТипыКолонки, , , Новый КвалификаторыДаты(ЧастиДаты.ДатаВремя)));
-	СтрокаТаблицы = таблица.Добавить();
-	СтрокаТаблицы.Ссылка = Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f93e1128-c83a-11e2-8026-0015e9b8c48d")); // ЦУ-00000052 Тара
-	СтрокаТаблицы.Наименование = "Тара";
-	СтрокаТаблицы.ЕдиницаИзмерения = Null;
-	СтрокаТаблицы = таблица.Добавить();
-	СтрокаТаблицы.Ссылка = Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f93e112a-c83a-11e2-8026-0015e9b8c48d")); // ЦУ-00000053 Бутылка 
-	СтрокаТаблицы.Наименование = "Бутылка ";
-	СтрокаТаблицы.ЕдиницаИзмерения = Справочники.УпаковкиЕдиницыИзмерения.ПолучитьСсылку(Новый УникальныйИдентификатор("bd72d926-55bc-11d9-848a-00112f43529a")); // 796  шт
-	СтрокаТаблицы = таблица.Добавить();
-	СтрокаТаблицы.Ссылка = Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f93e112c-c83a-11e2-8026-0015e9b8c48d")); // ЦУ-00000054 Ящик 
-	СтрокаТаблицы.Наименование = "Ящик ";
-	СтрокаТаблицы.ЕдиницаИзмерения = Справочники.УпаковкиЕдиницыИзмерения.ПолучитьСсылку(Новый УникальныйИдентификатор("bd72d926-55bc-11d9-848a-00112f43529a")); // 796  шт
-	СтрокаТаблицы = таблица.Добавить();
-	СтрокаТаблицы.Ссылка = Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f93e112f-c83a-11e2-8026-0015e9b8c48d")); // ЦУ-00000055 Поддон (металл)
-	СтрокаТаблицы.Наименование = "Поддон (металл)";
-	СтрокаТаблицы.ЕдиницаИзмерения = Справочники.УпаковкиЕдиницыИзмерения.ПолучитьСсылку(Новый УникальныйИдентификатор("bd72d926-55bc-11d9-848a-00112f43529a")); // 796  шт
-	СтрокаТаблицы = таблица.Добавить();
-	СтрокаТаблицы.Ссылка = Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f93e113c-c83a-11e2-8026-0015e9b8c48d")); // ЦУ-00000056 Вода газированная
-	СтрокаТаблицы.Наименование = "Вода газированная";
-	СтрокаТаблицы.ЕдиницаИзмерения = Null;
-	СтрокаТаблицы = таблица.Добавить();
-	СтрокаТаблицы.Ссылка = Справочники.Номенклатура.ПолучитьСсылку(Новый УникальныйИдентификатор("f178c63e-c549-11e7-8e50-0050568b35ac")); // 00-00000288 Инструкция огнетушителя ОП-10
-	СтрокаТаблицы.Наименование = 555;
-	СтрокаТаблицы.ЕдиницаИзмерения = '20200615';
-	Запрос1.УстановитьПараметр("таблица", таблица);
-
-
-	РезультатЗапроса = Запрос1.Выполнить();
-	Выборка = РезультатЗапроса.Выбрать();
-	Пока Выборка.Следующий() Цикл
-		
-	КонецЦикла;
-</Value>
+					<Value xsi:type="xs:string">об = Выборка.Ссылка.ПолучитьОбъект();
+Сообщить(об);</Value>
 				</Property>
 				<Property name="МетодИсполненияКода">
-					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">2</Value>
 				</Property>
 				<Property name="ПараметрыЗапроса">
 					<Value xsi:type="ValueListType">
@@ -288,393 +169,24 @@
 						<item>
 							<value xsi:type="Structure">
 								<Property name="Имя">
-									<Value xsi:type="xs:string">строка</Value>
+									<Value xsi:type="xs:string">справочник</Value>
 								</Property>
 								<Property name="ТипЗначения">
 									<Value xsi:type="TypeDescription">
-										<Type>xs:string</Type>
-										<StringQualifiers>
-											<Length>0</Length>
-											<AllowedLength>Variable</AllowedLength>
-										</StringQualifiers>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиКалькуляции</Type>
 									</Value>
 								</Property>
 								<Property name="Значение">
-									<Value xsi:type="xs:string">тестовый параметр</Value>
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
 								</Property>
 								<Property name="ТипКонтейнера">
 									<Value xsi:type="xs:decimal">0</Value>
 								</Property>
 								<Property name="Контейнер">
-									<Value xsi:type="xs:string">тестовый параметр</Value>
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
 								</Property>
 							</value>
 							<id xsi:type="xs:decimal">1</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">число</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>xs:decimal</Type>
-										<NumberQualifiers>
-											<Digits>0</Digits>
-											<FractionDigits>0</FractionDigits>
-											<AllowedSign>Any</AllowedSign>
-										</NumberQualifiers>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:decimal">555</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="xs:decimal">555</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">2</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">булево</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>xs:boolean</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:boolean">false</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="xs:boolean">false</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">3</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">дата</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>xs:dateTime</Type>
-										<DateQualifiers>
-											<DateFractions>Date</DateFractions>
-										</DateQualifiers>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:dateTime">2020-01-02T00:00:00</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="xs:dateTime">2020-01-02T00:00:00</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">4</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">датавремя</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>xs:dateTime</Type>
-										<DateQualifiers>
-											<DateFractions>DateTime</DateFractions>
-										</DateQualifiers>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">5</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">граница</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:Bound</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:string">15.03.2020 0:20:00 Исключая</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="Structure">
-										<Property name="Тип">
-											<Value xsi:type="xs:string">Граница</Value>
-										</Property>
-										<Property name="ВидГраницы">
-											<Value xsi:type="xs:string">Исключая</Value>
-										</Property>
-										<Property name="Значение">
-											<Value xsi:type="xs:dateTime">2020-03-15T00:20:00</Value>
-										</Property>
-										<Property name="Представление">
-											<Value xsi:type="xs:string">15.03.2020 0:20:00 Исключая</Value>
-										</Property>
-									</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">6</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">момент_времени</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:PointOfTime</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:string">31.03.2017 23:59:59;Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="Structure">
-										<Property name="Тип">
-											<Value xsi:type="xs:string">МоментВремени</Value>
-										</Property>
-										<Property name="Дата">
-											<Value xsi:type="xs:dateTime">2017-03-31T23:59:59</Value>
-										</Property>
-										<Property name="Ссылка">
-											<Value xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:DocumentRef.РеализацияТоваровУслуг">d94e29d2-d5b3-11e7-8e50-0050568b35ac</Value>
-										</Property>
-										<Property name="Представление">
-											<Value xsi:type="xs:string">31.03.2017 23:59:59;Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59</Value>
-										</Property>
-									</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">7</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">null</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>Null</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="Null"/>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="Null"/>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">8</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">вид_движения_накопления</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccumulationRecordType</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">9</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">вид_движения_бухгалтерии</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccountingRecordType</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">10</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">план_счетов</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">11</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">вид_счета</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccountType</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">12</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">тип_число</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>Type</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:string">Тип: Число</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="Structure">
-										<Property name="Тип">
-											<Value xsi:type="xs:string">Тип</Value>
-										</Property>
-										<Property name="ИмяТипа">
-											<Value xsi:type="xs:string">Число</Value>
-										</Property>
-										<Property name="Представление">
-											<Value xsi:type="xs:string">Тип: Число</Value>
-										</Property>
-									</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">13</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">тип_ссылка</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>Type</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="xs:string">Тип: Валюта</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="Structure">
-										<Property name="Тип">
-											<Value xsi:type="xs:string">Тип</Value>
-										</Property>
-										<Property name="ИмяТипа">
-											<Value xsi:type="xs:string">СправочникСсылка.Валюты</Value>
-										</Property>
-										<Property name="Представление">
-											<Value xsi:type="xs:string">Тип: Валюта</Value>
-										</Property>
-									</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">14</id>
-						</item>
-						<item>
-							<value xsi:type="Structure">
-								<Property name="Имя">
-									<Value xsi:type="xs:string">уникальный_идентификатор</Value>
-								</Property>
-								<Property name="ТипЗначения">
-									<Value xsi:type="TypeDescription">
-										<Type>UUID</Type>
-									</Value>
-								</Property>
-								<Property name="Значение">
-									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ae</Value>
-								</Property>
-								<Property name="ТипКонтейнера">
-									<Value xsi:type="xs:decimal">0</Value>
-								</Property>
-								<Property name="Контейнер">
-									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ae</Value>
-								</Property>
-							</value>
-							<id xsi:type="xs:decimal">15</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
@@ -1331,26 +843,395 @@
 									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">f178c63e-c549-11e7-8e50-0050568b35ac</Value>
 								</Property>
 							</value>
-							<id xsi:type="xs:decimal">16</id>
+							<id xsi:type="xs:decimal">2</id>
 						</item>
 						<item>
 							<value xsi:type="Structure">
 								<Property name="Имя">
-									<Value xsi:type="xs:string">справочник</Value>
+									<Value xsi:type="xs:string">строка</Value>
 								</Property>
 								<Property name="ТипЗначения">
 									<Value xsi:type="TypeDescription">
-										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиКалькуляции</Type>
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
 									</Value>
 								</Property>
 								<Property name="Значение">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
+									<Value xsi:type="xs:string">тестовый параметр</Value>
 								</Property>
 								<Property name="ТипКонтейнера">
 									<Value xsi:type="xs:decimal">0</Value>
 								</Property>
 								<Property name="Контейнер">
-									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.СтатьиКалькуляции">433704be-c180-11e4-a7a9-000d884fd00d</Value>
+									<Value xsi:type="xs:string">тестовый параметр</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">число</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:decimal</Type>
+										<NumberQualifiers>
+											<Digits>0</Digits>
+											<FractionDigits>0</FractionDigits>
+											<AllowedSign>Any</AllowedSign>
+										</NumberQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:decimal">555</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:decimal">555</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">булево</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:boolean</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:boolean">false</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:boolean">false</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">дата</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>Date</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2020-01-02T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2020-01-02T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">6</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">датавремя</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2020-03-02T15:23:59</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">7</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">граница</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:Bound</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">15.03.2020 0:20:00 Исключая</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Граница</Value>
+										</Property>
+										<Property name="ВидГраницы">
+											<Value xsi:type="xs:string">Исключая</Value>
+										</Property>
+										<Property name="Значение">
+											<Value xsi:type="xs:dateTime">2020-03-15T00:20:00</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">15.03.2020 0:20:00 Исключая</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">8</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">момент_времени</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:PointOfTime</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">31.03.2017 23:59:59;Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">МоментВремени</Value>
+										</Property>
+										<Property name="Дата">
+											<Value xsi:type="xs:dateTime">2017-03-31T23:59:59</Value>
+										</Property>
+										<Property name="Ссылка">
+											<Value xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:DocumentRef.РеализацияТоваровУслуг">d94e29d2-d5b3-11e7-8e50-0050568b35ac</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">31.03.2017 23:59:59;Реализация товаров и услуг МС00-000004 от 31.03.2017 23:59:59</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">9</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">null</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>Null</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="Null"/>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Null"/>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">10</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">вид_движения_накопления</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccumulationRecordType</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccumulationRecordType">Receipt</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">11</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">вид_движения_бухгалтерии</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccountingRecordType</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountingRecordType">Credit</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">12</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">план_счетов</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">1774fbdc-c180-11e4-a7a9-000d884fd00d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">13</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">вид_счета</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise">d11p1:AccountType</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:AccountType">Passive</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">14</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">тип_число</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>Type</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Тип: Число</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Тип</Value>
+										</Property>
+										<Property name="ИмяТипа">
+											<Value xsi:type="xs:string">Число</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">Тип: Число</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">15</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">тип_ссылка</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>Type</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Тип: Валюта</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Тип</Value>
+										</Property>
+										<Property name="ИмяТипа">
+											<Value xsi:type="xs:string">СправочникСсылка.Валюты</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">Тип: Валюта</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">16</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">уникальный_идентификатор</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>UUID</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ae</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="UUID">5e6e8412-fd5b-11e4-92f1-0050568b35ae</Value>
 								</Property>
 							</value>
 							<id xsi:type="xs:decimal">17</id>
@@ -1680,7 +1561,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">6 / 0:00:00.009</Value>
+					<Value xsi:type="xs:string">6 / 0:00:00.024</Value>
 				</Property>
 			</Value>
 			<Value xsi:type="Structure">
@@ -1940,7 +1821,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">100 / 0:00:00.011</Value>
+					<Value xsi:type="xs:string">100 / 0:00:00.018</Value>
 				</Property>
 			</Value>
 		</Value>
