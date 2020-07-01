@@ -136,7 +136,6 @@
 					<EnableDrag>true</EnableDrag>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СоставТипа</DataPath>
-					<TreeSpecialSearch>false</TreeSpecialSearch>
 					<ContextMenu name="СоставТипаКонтекстноеМеню" id="5"/>
 					<AutoCommandBar name="СоставТипаКоманднаяПанель" id="6">
 						<Autofill>false</Autofill>

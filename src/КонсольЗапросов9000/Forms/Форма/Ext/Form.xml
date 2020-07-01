@@ -193,7 +193,6 @@
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>ПакетЗапросов</DataPath>
-									<TreeSpecialSearch>false</TreeSpecialSearch>
 									<ContextMenu name="ПакетЗапросовКонтекстноеМеню" id="30"/>
 									<AutoCommandBar name="ПакетЗапросовКоманднаяПанель" id="31">
 										<Autofill>false</Autofill>
@@ -1266,7 +1265,6 @@
 													<EnableDrag>true</EnableDrag>
 													<DataPath>СтруктураЗаписиРезультата</DataPath>
 													<RowPictureDataPath>СтруктураЗаписиРезультата.Картинка</RowPictureDataPath>
-													<TreeSpecialSearch>false</TreeSpecialSearch>
 													<ContextMenu name="СтруктураЗаписиРезультатаКонтекстноеМеню" id="484"/>
 													<AutoCommandBar name="СтруктураЗаписиРезультатаКоманднаяПанель" id="485">
 														<Autofill>false</Autofill>
@@ -1889,7 +1887,6 @@
 										<ExcludedCommand>SortListAsc</ExcludedCommand>
 										<ExcludedCommand>SortListDesc</ExcludedCommand>
 									</CommandSet>
-									<TreeSpecialSearch>false</TreeSpecialSearch>
 									<ContextMenu name="РезультатЗапросаДеревоКонтекстноеМеню" id="278"/>
 									<AutoCommandBar name="РезультатЗапросаДеревоКоманднаяПанель" id="279">
 										<Autofill>false</Autofill>
@@ -3528,7 +3525,7 @@
 			</ToolTip>
 			<Shortcut>Alt+P</Shortcut>
 			<Picture>
-				<xr:Ref>StdPicture.Select</xr:Ref>
+				<xr:Ref>-100</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Команда_ВставитьПредопределенноеЗначение</Action>
