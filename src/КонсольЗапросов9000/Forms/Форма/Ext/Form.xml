@@ -122,8 +122,15 @@
 							<v8:content>Командная панель формы право</v8:content>
 						</v8:item>
 					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
 					<ExtendedTooltip name="КоманднаяПанельФормыПравоРасширеннаяПодсказка" id="259"/>
 					<ChildItems>
+						<Button name="ТехнологическийЖурнал" id="501">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ТехнологическийЖурнал</CommandName>
+							<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+							<ExtendedTooltip name="ТехнологическийЖурналРасширеннаяПодсказка" id="502"/>
+						</Button>
 						<Button name="ФормаИзменитьФорму" id="254">
 							<Type>CommandBarButton</Type>
 							<Representation>Picture</Representation>
@@ -861,6 +868,8 @@
 																			<EditMode>Directly</EditMode>
 																			<ShowInHeader>false</ShowInHeader>
 																			<Width>1</Width>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<MaxWidth>1</MaxWidth>
 																			<ValuesPicture>
 																				<xr:Abs>ValuesPicture.png</xr:Abs>
 																				<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -2963,6 +2972,38 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ОпцияПериодОпросаВключенияВыключенияТехнологическогоЖурнала" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Опция период опроса включения выключения технологического журнала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТехнологическийЖурналВремяВключенияВыключения" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технологический журнал время включения выключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3648,6 +3689,21 @@
 			</Picture>
 			<Action>Команда_ПараметрыЗапросаРядомСТекстом</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ТехнологическийЖурнал" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЖ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить/выключить технологический журнал для получения планов запросов и другой информации.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Команда_ТехнологическийЖурнал</Action>
 		</Command>
 	</Commands>
 </Form>

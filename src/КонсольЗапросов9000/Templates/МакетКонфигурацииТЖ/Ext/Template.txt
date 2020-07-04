@@ -1,0 +1,40 @@
+﻿<config>
+<!-- %1 -->
+<log location="%2" history="24">
+	<event>
+		<eq property="name" value="db2"/>
+		<eq property="SessionID" value="%3"/>
+		<like property="Context" value="%4"/>
+	</event>
+	<event>
+		<eq property="name" value="dbmssql"/>
+		<eq property="SessionID" value="%3"/>
+		<like property="Context" value="%4"/>
+	</event>
+	<event>
+		<eq property="name" value="dbpostgrs"/>
+		<eq property="SessionID" value="%3"/>
+		<like property="Context" value="%4"/>
+	</event>
+	<event>
+		<eq property="name" value="dboracle"/>
+		<eq property="SessionID" value="%3"/>
+		<like property="Context" value="%4"/>
+	</event>
+	<event>
+		<eq property="name" value="SDBL"/>
+		<eq property="SessionID" value="%3"/>
+		<like property="Context" value="%4"/>
+	</event>
+	<event>
+		<eq property="name" value="DBV8DBEng"/>
+		<eq property="SessionID" value="%3"/>
+		<like property="Context" value="%4"/>
+	</event>
+	<property name="all"/>
+	<property name="sql"/>
+	<property name="plansqltext"/>
+</log>
+<plansql/>
+<!-- %1 -->
+</config>
