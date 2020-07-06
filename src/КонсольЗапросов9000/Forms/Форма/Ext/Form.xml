@@ -1428,22 +1428,47 @@
 												</Button>
 											</ChildItems>
 										</CommandBar>
-										<InputField name="РезультатВПакете" id="242">
-											<DataPath>РезультатВПакете</DataPath>
+										<UsualGroup name="ГруппаРезультатВПакете" id="505">
 											<Visible>false</Visible>
-											<TitleLocation>None</TitleLocation>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>18</MaxWidth>
-											<ListChoiceMode>true</ListChoiceMode>
-											<ChooseType>false</ChooseType>
-											<TextEdit>false</TextEdit>
-											<EditTextUpdate>Always</EditTextUpdate>
-											<ContextMenu name="РезультатВПакетеКонтекстноеМеню" id="243"/>
-											<ExtendedTooltip name="РезультатВПакетеРасширеннаяПодсказка" id="244"/>
-											<Events>
-												<Event name="OnChange">РезультатВПакетеПриИзменении</Event>
-											</Events>
-										</InputField>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат в пакете</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа результат в пакете</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРезультатВПакетеРасширеннаяПодсказка" id="506"/>
+											<ChildItems>
+												<InputField name="РезультатВПакете" id="242">
+													<DataPath>РезультатВПакете</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>18</MaxWidth>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<EditTextUpdate>Always</EditTextUpdate>
+													<ContextMenu name="РезультатВПакетеКонтекстноеМеню" id="243"/>
+													<ExtendedTooltip name="РезультатВПакетеРасширеннаяПодсказка" id="244"/>
+													<Events>
+														<Event name="OnChange">РезультатВПакетеПриИзменении</Event>
+													</Events>
+												</InputField>
+												<Button name="ПланЗапроса" id="503">
+													<Type>Hyperlink</Type>
+													<Visible>false</Visible>
+													<CommandName>Form.Command.ПланЗапроса</CommandName>
+													<ExtendedTooltip name="ПланЗапросаРасширеннаяПодсказка" id="504"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="КоманднаяПанельВидРезультата" id="396">
@@ -1766,19 +1791,22 @@
 								<ExtendedTooltip name="ПакетРезультатаЗапросаУправлениеПоискомРасширеннаяПодсказка" id="412"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="Selection">ПакетРезультатаЗапросаВыбор</Event>
 								<Event name="OnActivateRow">ПакетРезультатаЗапросаПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
 								<InputField name="ПакетРезультатаЗапросаИмя" id="413">
 									<DataPath>ПакетРезультатаЗапроса.Имя</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
 									<ContextMenu name="ПакетРезультатаЗапросаИмяКонтекстноеМеню" id="414"/>
 									<ExtendedTooltip name="ПакетРезультатаЗапросаИмяРасширеннаяПодсказка" id="415"/>
 								</InputField>
 								<InputField name="ПакетРезультатаЗапросаИнфо" id="416">
 									<DataPath>ПакетРезультатаЗапроса.Инфо</DataPath>
 									<TitleLocation>None</TitleLocation>
-									<EditMode>EnterOnInput</EditMode>
+									<EditMode>Directly</EditMode>
+									<CellHyperlink>true</CellHyperlink>
 									<HeaderPicture>
 										<xr:Ref>StdPicture.History</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -2895,6 +2923,17 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
+				<Column name="ТекущийОтображаемый" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий отображаемый</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="РезультатНаФорме" id="17">
@@ -3027,6 +3066,29 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПакетРезультатаЗапросаИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПакетРезультатаЗапросаИнфо</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПакетРезультатаЗапроса.ТекущийОтображаемый</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">win:ScrollBar</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -3704,6 +3766,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Команда_ТехнологическийЖурнал</Action>
+		</Command>
+		<Command name="ПланЗапроса" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Команда_ПланЗапроса</Action>
 		</Command>
 	</Commands>
 </Form>

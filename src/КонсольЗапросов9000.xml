@@ -441,6 +441,7 @@
 			<Form>ВыборПредопределенного</Form>
 			<Form>Справка</Form>
 			<Form>ФормаКода</Form>
+			<Form>ФормаПланаЗапроса</Form>
 			<Template>Картинки</Template>
 			<Template>СправкаАлгоритм</Template>
 			<Template>МакетКонфигурацииТЖ</Template>
