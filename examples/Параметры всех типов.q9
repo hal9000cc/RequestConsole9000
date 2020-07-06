@@ -20,7 +20,7 @@
 				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="ВидРезультата">
-				<Value xsi:type="xs:string">дерево</Value>
+				<Value xsi:type="xs:string">таблица</Value>
 			</Property>
 			<Property name="ОграничениеВыводимыхСтрок">
 				<Value xsi:type="xs:decimal">1000</Value>
@@ -108,9 +108,7 @@
 </Value>
 				</Property>
 				<Property name="ТекстКод">
-					<Value xsi:type="xs:string">С = Новый СистемнаяИнформация();
-Сообщить(ТипЗнч(С));
-Сообщить(КаталогПрограммы());</Value>
+					<Value xsi:type="xs:string">Сообщить(Новый УникальныйИдентификатор);</Value>
 				</Property>
 				<Property name="МетодИсполненияКода">
 					<Value xsi:type="xs:decimal">0</Value>
@@ -1565,7 +1563,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">6 / 0:00:00.046</Value>
+					<Value xsi:type="xs:string">6 / 0:00:00.038</Value>
 				</Property>
 			</Value>
 			<Value xsi:type="Structure">
