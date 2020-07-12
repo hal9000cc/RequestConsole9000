@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
-	<Width>100</Width>
-	<Height>25</Height>
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>План запроса</v8:content>
+		</v8:item>
+	</Title>
+	<Width>120</Width>
+	<Height>30</Height>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -27,11 +33,181 @@
 			<ExtendedTooltip name="ГруппаСобытиеЖурналаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<TextDocumentField name="СобытиеЖурнала" id="3">
-					<DataPath>СобытиеЖурнала</DataPath>
+					<DataPath>ТекстСобытияЖурнала</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="СобытиеЖурналаКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="СобытиеЖурналаРасширеннаяПодсказка" id="5"/>
 				</TextDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТекстЗапроса" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа текст запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<ExtendedTooltip name="ГруппаТекстЗапросаРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Pages name="ГруппаСтраницыЗапроса" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы запроса</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы запроса</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницыЗапросаРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<Page name="СтраницаТекст" id="46">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запрос</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница текст</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаТекстРасширеннаяПодсказка" id="47"/>
+							<ChildItems>
+								<TextDocumentField name="ТекстЗапроса" id="12">
+									<DataPath>ТекстЗапроса</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="14"/>
+								</TextDocumentField>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПараметрыЗапроса" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доп. параметры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница параметры запроса</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаПараметрыЗапросаРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<TextDocumentField name="ПараметрыЗапроса" id="41">
+									<DataPath>ПараметрыЗапроса</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ПараметрыЗапросаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ПараметрыЗапросаРасширеннаяПодсказка" id="43"/>
+								</TextDocumentField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПланЗапроса" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа план запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаПланЗапросаРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<Table name="План" id="17">
+					<Representation>Tree</Representation>
+					<ReadOnly>true</ReadOnly>
+					<DefaultItem>true</DefaultItem>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HeaderHeight>2</HeaderHeight>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>План</DataPath>
+					<ContextMenu name="ПланКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="ПланКоманднаяПанель" id="19">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПланРасширеннаяПодсказка" id="20"/>
+					<SearchStringAddition name="ПланСтрокаПоиска" id="21">
+						<AdditionSource>
+							<Item>План</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПланСтрокаПоискаКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="ПланСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПланСостояниеПросмотра" id="24">
+						<AdditionSource>
+							<Item>План</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПланСостояниеПросмотраКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="ПланСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПланУправлениеПоиском" id="27">
+						<AdditionSource>
+							<Item>План</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПланУправлениеПоискомКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ПланУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПланОператор" id="30">
+							<DataPath>План.Оператор</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>66</Width>
+							<ContextMenu name="ПланОператорКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПланОператорРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="ПланСтоимостьУзла" id="50">
+							<DataPath>План.СтоимостьУзла</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>7</Width>
+							<ContextMenu name="ПланСтоимостьУзлаКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ПланСтоимостьУзлаРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<InputField name="ПланСтоимостьОператора" id="53">
+							<DataPath>План.СтоимостьОператора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПланСтоимостьОператораКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПланСтоимостьОператораРасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<InputField name="ПланСтрокПланФакт" id="56">
+							<DataPath>План.СтрокПланФакт</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПланСтрокПланФактКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ПланСтрокПланФактРасширеннаяПодсказка" id="58"/>
+						</InputField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
 		</UsualGroup>
 		<CommandBar name="ГруппаКоманднаяПанельВнизу" id="6">
@@ -50,11 +226,11 @@
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="ГруппаКоманднаяПанельВнизуРасширеннаяПодсказка" id="7"/>
 			<ChildItems>
-				<Button name="Кнопка1" id="8">
+				<Button name="КнопкаЗакрыть" id="8">
 					<Type>CommandBarButton</Type>
 					<Representation>PictureAndText</Representation>
 					<CommandName>Form.StandardCommand.Close</CommandName>
-					<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="9"/>
+					<ExtendedTooltip name="КнопкаЗакрытьРасширеннаяПодсказка" id="9"/>
 				</Button>
 			</ChildItems>
 		</CommandBar>
@@ -66,7 +242,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
-		<Attribute name="СобытиеЖурнала" id="2">
+		<Attribute name="ТекстСобытияЖурнала" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -75,6 +251,120 @@
 			</Title>
 			<Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="План" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Оператор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтоимостьУзла" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость узла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтоимостьОператора" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость оператора</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтрокПланФакт" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строк (план/факт)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Событие" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Событие</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПараметрыЗапроса" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
