@@ -3043,6 +3043,17 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ТехнологическийЖурналВключенИРаботает" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технологический журнал включен и работает</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3781,6 +3792,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Команда_ПланЗапроса</Action>
+		</Command>
+		<Command name="ПолучитьФайлыТехнологическогоЖурналаКонсоли" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить файлы технологического журнала консоли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить файлы технологического журнала консоли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьФайлыТехнологическогоЖурналаКонсоли</Action>
 		</Command>
 	</Commands>
 </Form>
