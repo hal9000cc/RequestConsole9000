@@ -7,7 +7,6 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
-	<Enabled>false</Enabled>
 	<CommandSet>
 		<ExcludedCommand>Help</ExcludedCommand>
 	</CommandSet>
@@ -1368,7 +1367,6 @@
 					<ExtendedTooltip name="ГраппуКоманднаяПанельРезультатаРасширеннаяПодсказка" id="236"/>
 					<ChildItems>
 						<UsualGroup name="КоманднаяПанельЛево" id="248">
-							<Enabled>false</Enabled>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1557,6 +1555,7 @@
 										<Button name="ОбновитьРезультат" id="293">
 											<Type>UsualButton</Type>
 											<Representation>Picture</Representation>
+											<Enabled>false</Enabled>
 											<CommandName>Form.Command.ОбновитьРезультат</CommandName>
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ОбновитьРезультатРасширеннаяПодсказка" id="294"/>
@@ -1752,7 +1751,8 @@
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
-							<Width>8</Width>
+							<Width>19</Width>
+							<SelectionMode>SingleRow</SelectionMode>
 							<RowSelectionMode>Row</RowSelectionMode>
 							<DataPath>ПакетРезультатаЗапроса</DataPath>
 							<RowPictureDataPath>ПакетРезультатаЗапроса.ТипРезультата</RowPictureDataPath>
