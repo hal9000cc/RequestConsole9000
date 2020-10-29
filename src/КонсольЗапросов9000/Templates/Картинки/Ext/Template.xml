@@ -441,6 +441,57 @@
 		<zOrder>0</zOrder>
 		<pictureIndex>22</pictureIndex>
 	</drawing>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>40</id>
+		<formatIndex>0</formatIndex>
+		<beginRow>8</beginRow>
+		<beginRowOffset>0</beginRowOffset>
+		<endRow>9</endRow>
+		<endRowOffset>3</endRowOffset>
+		<beginColumn>1</beginColumn>
+		<beginColumnOffset>0</beginColumnOffset>
+		<endColumn>1</endColumn>
+		<endColumnOffset>48</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>RealSize</pictureSize>
+		<zOrder>0</zOrder>
+		<pictureIndex>23</pictureIndex>
+	</drawing>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>41</id>
+		<formatIndex>0</formatIndex>
+		<beginRow>11</beginRow>
+		<beginRowOffset>0</beginRowOffset>
+		<endRow>12</endRow>
+		<endRowOffset>3</endRowOffset>
+		<beginColumn>1</beginColumn>
+		<beginColumnOffset>0</beginColumnOffset>
+		<endColumn>1</endColumn>
+		<endColumnOffset>48</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>RealSize</pictureSize>
+		<zOrder>0</zOrder>
+		<pictureIndex>24</pictureIndex>
+	</drawing>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>42</id>
+		<formatIndex>0</formatIndex>
+		<beginRow>12</beginRow>
+		<beginRowOffset>0</beginRowOffset>
+		<endRow>13</endRow>
+		<endRowOffset>3</endRowOffset>
+		<beginColumn>1</beginColumn>
+		<beginColumnOffset>0</beginColumnOffset>
+		<endColumn>1</endColumn>
+		<endColumnOffset>48</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>RealSize</pictureSize>
+		<zOrder>0</zOrder>
+		<pictureIndex>25</pictureIndex>
+	</drawing>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>1</defaultFormatIndex>
 	<height>15</height>
@@ -494,6 +545,10 @@
 		<drawingID>33</drawingID>
 	</namedItem>
 	<namedItem xsi:type="NamedItemDrawing">
+		<name>Тип_Массив</name>
+		<drawingID>41</drawingID>
+	</namedItem>
+	<namedItem xsi:type="NamedItemDrawing">
 		<name>Тип_МоментВремени</name>
 		<drawingID>21</drawingID>
 	</namedItem>
@@ -522,12 +577,20 @@
 		<drawingID>31</drawingID>
 	</namedItem>
 	<namedItem xsi:type="NamedItemDrawing">
+		<name>Тип_СписокЗначений</name>
+		<drawingID>42</drawingID>
+	</namedItem>
+	<namedItem xsi:type="NamedItemDrawing">
 		<name>Тип_СправочникСсылка</name>
 		<drawingID>24</drawingID>
 	</namedItem>
 	<namedItem xsi:type="NamedItemDrawing">
 		<name>Тип_Строка</name>
 		<drawingID>14</drawingID>
+	</namedItem>
+	<namedItem xsi:type="NamedItemDrawing">
+		<name>Тип_ТаблицаЗначений</name>
+		<drawingID>40</drawingID>
 	</namedItem>
 	<namedItem xsi:type="NamedItemDrawing">
 		<name>Тип_Тип</name>
@@ -767,5 +830,32 @@ BkgAIAiSRUoMNBRYwEKADi72OGrCbOfAEgsiQFiyZcsYowIHECBwwFiXLhSgAhAw
 YAAJGkCApNFKgQEDBVnYaPKgdQOICBlezNCiRysHERkgXKNSCAsCowY6drgA4BeW
 MimqBMFAYQMHB4FzDEyTYs6NHVIUgBDRAPJJng3OoBmUOUAGGgw+N4wWIcoDGTYg
 EB4YEAA7</picture>
+	</picture>
+	<picture>
+		<index>22</index>
+		<picture t="false">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAB3RJTUUH5AYbDCU1/gM7qgAAAXBJREFUOI2lk88rhFEUhp8zZlhI
+hA1Z+w9s1KSJRhaSsqGmlKaUsrGiWCpioyywUJQFpShsZGExKcXCgqWdlDXffPfH
+sZjPl5mJaE7dxXvPuc99773niqpSSyRqWg0kAXIL67eFF9pAmv66sLdDn/eX53qS
+AHjtfNya7fjPzlNLG2HsoLm15XV976QT/nofQjKhBgBVZWZl5y60Xp1z8dg8OP1R
+W+d1cn71WVVLDgCMwvbhGQD5sSEUMM4jUf5Lo4IkJfYSA8LQkRsZRAQC6/FeKRoP
+oqASaQcCKVLVAIDd4wtAGB8ewCsE1kHUJ14hMA6AAFcN8MDoYH+pwDi8KkHRRQ6I
+5ysjBihwdH4JwHA2g/dKYG0pER05CH8BhMaSzaQBoWhsyYHxyLenLdpfAM46Lq6u
+ARjoS6OAdb6s2LjqPokBbS2NTE+MkojsFhpSdHe1x4WFukSZLgN8vH+85RfX7iuT
+Nw9PP+p6xABIrd/5E+4W0HU0qqSIAAAAAElFTkSuQmCC</picture>
+	</picture>
+	<picture>
+		<index>23</index>
+		<picture t="false">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAB3RJTUUH5AYbDgUsDGhjpgAAAE9JREFUOI1j/P//PwMlgIki3VQ1
+4GhTxP+jTRF4/YNNDYYLcBmCS5w2YYBuGz6vDaJYgAHruhWMDAwIZ8NomDjtXYDN
+Fbhsp4oLGId+ZgIAaIgoayXyHeAAAAAASUVORK5CYII=</picture>
+	</picture>
+	<picture>
+		<index>24</index>
+		<picture t="false">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAB3RJTUUH5AYbDggQlqlhbAAAAEVJREFUOI1j/P//PwMlgIWBgYHB
+29v7MDMzsw0pGv/+/Xtk69attkzk2szIyMjIwMDAwEipF8h2AQyMhsFoGDAwDIsw
+AADqyi8lHIXJfgAAAABJRU5ErkJggg==</picture>
 	</picture>
 </document>

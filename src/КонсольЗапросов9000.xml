@@ -326,6 +326,38 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="0b5fd0a3-108f-4233-bf31-9c8d2d03d59c">
+				<Properties>
+					<Name>СохраняемыеСостояния</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохраняемые состояния</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Сохраняемые состояния - структура, предназначена для сохранения значений, которых нет в опциях (состояния флажков форм, разных значений, и т.д.).Записывается в файл. Из файла читается только при первом открытии.</Comment>
+					<Type/>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
 			<Form>Форма</Form>
 			<Form>ПодборВСписок</Form>
 			<Form>РедактированиеТипа</Form>
@@ -336,6 +368,7 @@
 			<Form>ФормаТабличногоДокумента</Form>
 			<Form>ВыборПредопределенного</Form>
 			<Form>Справка</Form>
+			<Form>ФормаКода</Form>
 			<Template>Картинки</Template>
 			<Template>СправкаАлгоритм</Template>
 		</ChildObjects>
