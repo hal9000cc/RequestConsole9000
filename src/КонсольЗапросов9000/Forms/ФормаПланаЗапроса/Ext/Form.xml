@@ -203,7 +203,7 @@
 										<InputField name="ПланОператор" id="30">
 											<DataPath>План.Оператор</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>66</Width>
+											<Width>70</Width>
 											<MultiLine>true</MultiLine>
 											<ContextMenu name="ПланОператорКонтекстноеМеню" id="31"/>
 											<ExtendedTooltip name="ПланОператорРасширеннаяПодсказка" id="32"/>
