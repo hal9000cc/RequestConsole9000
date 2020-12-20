@@ -199,6 +199,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаОчистить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
