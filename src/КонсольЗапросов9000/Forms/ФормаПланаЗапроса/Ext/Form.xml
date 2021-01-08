@@ -526,7 +526,7 @@
 							<ExtendedTooltip name="СтраницаПланТекстРасширеннаяПодсказка" id="67"/>
 							<ChildItems>
 								<TextDocumentField name="ПланТекст" id="68">
-									<DataPath>ПланТекст</DataPath>
+									<DataPath>ПланТекстовый</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="ПланТекстКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="ПланТекстРасширеннаяПодсказка" id="70"/>
@@ -549,7 +549,7 @@
 							<ExtendedTooltip name="СтраницаПланТекст1СРасширеннаяПодсказка" id="131"/>
 							<ChildItems>
 								<TextDocumentField name="ПланТекст1С" id="132">
-									<DataPath>ПланТекст1С</DataPath>
+									<DataPath>ПланТекстовый1С</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="ПланТекст1СКонтекстноеМеню" id="133"/>
 									<ExtendedTooltip name="ПланТекст1СРасширеннаяПодсказка" id="134"/>
@@ -1007,11 +1007,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПланТекст" id="7">
+		<Attribute name="ПланТекстовый" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>План текст</v8:content>
+					<v8:content>План текстовый</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1117,11 +1117,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПланТекст1С" id="15">
+		<Attribute name="ПланТекстовый1С" id="15">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>План текст</v8:content>
+					<v8:content>План текстовый в терминах 1С</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

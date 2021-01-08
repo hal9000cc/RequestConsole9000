@@ -32,7 +32,7 @@
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="ПараметрыЗапросаРядомСТекстом">
-				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="ДоляОтображенияТяжелых">
 				<Value xsi:type="xs:decimal">30</Value>
@@ -41,12 +41,12 @@
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="УстановитьЗначенияПараметров">
-				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 		</Value>
 	</Property>
 	<Property name="ТекущийЗапрос">
-		<Value xsi:type="xs:string">Запрос1</Value>
+		<Value xsi:type="xs:string">Запрос27</Value>
 	</Property>
 	<Property name="Опции">
 		<Value xsi:type="Structure">
@@ -1617,7 +1617,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">6 / 0:00:00.023</Value>
+					<Value xsi:type="xs:string">6 / 0:00:00.109</Value>
 				</Property>
 				<Property name="КурсорНачалоСтроки">
 					<Value xsi:type="xs:decimal">7</Value>
@@ -1839,7 +1839,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">100 / 0:00:00.109</Value>
+					<Value xsi:type="xs:string">100 / 0:00:00.110</Value>
 				</Property>
 				<Property name="КурсорНачалоСтроки">
 					<Value xsi:type="xs:decimal">0</Value>
@@ -2098,19 +2098,19 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">468 / 0:00:00.096</Value>
+					<Value xsi:type="xs:string">468 / 0:00:00.047</Value>
 				</Property>
 				<Property name="КурсорНачалоСтроки">
-					<Value xsi:type="xs:decimal">115</Value>
+					<Value xsi:type="xs:decimal">0</Value>
 				</Property>
 				<Property name="КурсорНачалоКолонки">
-					<Value xsi:type="xs:decimal">29</Value>
+					<Value xsi:type="xs:decimal">0</Value>
 				</Property>
 				<Property name="КурсорКонецСтроки">
-					<Value xsi:type="xs:decimal">115</Value>
+					<Value xsi:type="xs:decimal">0</Value>
 				</Property>
 				<Property name="КурсорКонецКолонки">
-					<Value xsi:type="xs:decimal">29</Value>
+					<Value xsi:type="xs:decimal">0</Value>
 				</Property>
 				<Property name="КодКурсорНачалоСтроки">
 					<Value xsi:type="xs:decimal">0</Value>
@@ -9635,63 +9635,7 @@
 					<Value xsi:type="Array"/>
 				</Property>
 				<Property name="Инфо">
-					<Value xsi:type="xs:string">1 / 0:00:03.264</Value>
-				</Property>
-				<Property name="КурсорНачалоСтроки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КурсорНачалоКолонки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КурсорКонецСтроки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КурсорКонецКолонки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КодКурсорНачалоСтроки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КодКурсорНачалоКолонки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КодКурсорКонецСтроки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="КодКурсорКонецКолонки">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-			</Value>
-			<Value xsi:type="Structure">
-				<Property name="Имя">
-					<Value xsi:type="xs:string">Запрос30</Value>
-				</Property>
-				<Property name="ТекстЗапроса">
-					<Value xsi:type="xs:string"/>
-				</Property>
-				<Property name="ТекстКод">
-					<Value xsi:type="xs:string"/>
-				</Property>
-				<Property name="МетодИсполненияКода">
-					<Value xsi:type="xs:decimal">0</Value>
-				</Property>
-				<Property name="ПараметрыЗапроса">
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-				</Property>
-				<Property name="ВременныеТаблицы">
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-				</Property>
-				<Property name="Строки">
-					<Value xsi:type="Array"/>
-				</Property>
-				<Property name="Инфо">
-					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">1 / 0:00:02.361</Value>
 				</Property>
 				<Property name="КурсорНачалоСтроки">
 					<Value xsi:type="xs:decimal">0</Value>

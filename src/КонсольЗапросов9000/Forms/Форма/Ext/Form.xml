@@ -338,6 +338,7 @@
 										<Event name="ValueChoice">ПакетЗапросовВыборЗначения</Event>
 										<Event name="Selection">ПакетЗапросовВыбор</Event>
 										<Event name="BeforeAddRow">ПакетЗапросовПередНачаломДобавления</Event>
+										<Event name="BeforeEditEnd">ПакетЗапросовПередОкончаниемРедактирования</Event>
 										<Event name="OnActivateRow">ПакетЗапросовПриАктивизацииСтроки</Event>
 									</Events>
 									<ChildItems>
