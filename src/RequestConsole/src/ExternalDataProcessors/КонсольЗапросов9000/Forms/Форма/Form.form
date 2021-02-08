@@ -2693,10 +2693,6 @@
                     <name>ПараметрыЗапросаПриАктивизацииСтроки</name>
                   </handlers>
                   <handlers>
-                    <event>OnStartEdit</event>
-                    <name>ПараметрыЗапросаПриНачалеРедактирования</name>
-                  </handlers>
-                  <handlers>
                     <event>OnChange</event>
                     <name>ПараметрыЗапросаПриИзменении</name>
                   </handlers>
